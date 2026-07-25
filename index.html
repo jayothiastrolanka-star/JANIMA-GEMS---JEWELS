@@ -1,230 +1,429 @@
 <!DOCTYPE html>
-<html lang="si">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Janima Gems & Jewels - Luxury Ceylon Blue Sapphire</title>
+  <title>Janima Gems & Jewels | High Jewelry & Energy Certification</title>
   
-  <!-- Modern Google Fonts Support (Clean Sinhala & Luxury English) -->
+  <!-- Premium Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Design Variables based on Reference Image */
     :root {
-      --primary-gold: #C5A059; /* Matching the reference image gold */
-      --secondary-blue: #2844B4; /* Deep Blue for Sapphire Theme */
-      --soft-cream-bg: #FAF8F5; /* Matches reference image bg */
-      --deep-red-accent: #8E1F30; /* Matches reference image drape */
-      --text-dark: #222222;
-      --text-muted: #666666;
-      --white-pure: #FFFFFF;
+      --primary-gold: #C5A059;
+      --gold-hover: #B08C45;
+      --soft-cream: #FAF8F5;
+      --card-cream: #F4F0EA;
+      --dark-text: #1A1A1A;
+      --muted-text: #666666;
+      --pure-white: #FFFFFF;
+      --border-color: #E6E0D4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
-      background-color: var(--soft-cream-bg);
-      color: var(--text-dark);
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--soft-cream);
+      color: var(--dark-text);
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* Luxury Full-Page Header */
-    .hero-section {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, var(--white-pure) 0%, #FAF8F5 100%);
-      border-bottom: 1px solid #F0EBE1;
+    /* Top Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 25px;
+      background-color: rgba(250, 248, 245, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(5px);
     }
 
-    .brand-header {
-      margin-bottom: 15px;
-    }
-
-    .brand-name {
+    .nav-brand {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--text-dark);
-      margin: 0;
+      letter-spacing: 2px;
+      color: var(--dark-text);
     }
 
-    .brand-sub {
+    .nav-badge {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: var(--primary-gold);
+      border: 1px solid var(--primary-gold);
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Section 1: Hero Banner */
+    .hero {
+      text-align: center;
+      padding: 50px 20px 30px 20px;
+    }
+
+    .hero-sub {
       font-size: 11px;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
       color: var(--primary-gold);
       font-weight: 600;
-      margin-top: 4px;
+      margin-bottom: 15px;
     }
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 600;
+      font-size: 38px;
+      line-height: 1.2;
+      font-weight: 400;
       font-style: italic;
-      color: var(--text-dark);
-      margin: 30px 0 10px 0;
-      letter-spacing: -0.5px;
+      margin-bottom: 15px;
+      color: var(--dark-text);
     }
 
-    .hero-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      max-width: 300px;
+    .hero-desc {
+      font-size: 13px;
+      color: var(--muted-text);
+      max-width: 320px;
       margin: 0 auto;
-      line-height: 1.5;
+      font-weight: 300;
     }
 
-    /* Product Highlight Area */
-    .product-section {
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      margin-top: -30px;
+    /* Hero Image Container */
+    .main-image-container {
+      padding: 0 20px;
+      margin-top: 25px;
+      margin-bottom: 50px;
     }
 
-    .gem-card {
-      width: 100%;
-      max-width: 360px;
-      background: var(--white-pure);
+    .main-image-card {
+      position: relative;
       border-radius: 20px;
-      padding: 30px 20px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-      border: 1px solid #EFEAE1;
-      text-align: left;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      border: 1px solid var(--border-color);
     }
 
-    .gem-title {
+    .main-image-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-overlay-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 25px 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+      color: var(--pure-white);
+    }
+
+    .overlay-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .overlay-sub {
+      font-size: 12px;
+      opacity: 0.8;
+      font-weight: 300;
+    }
+
+    /* Section 2: Stats & Heritage */
+    .stats-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px 20px;
+      background-color: var(--card-cream);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 50px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
       font-family: 'Playfair Display', serif;
       font-size: 26px;
-      color: var(--text-dark);
-      margin: 0 0 5px 0;
+      font-weight: 600;
+      color: var(--primary-gold);
     }
 
-    .gem-sub-description {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 30px;
-      border-bottom: 1px solid #F0EBE1;
-      padding-bottom: 15px;
-    }
-
-    /* Energy/Chakra Section */
-    .energy-details-box {
-      margin-top: 20px;
-    }
-
-    .detail-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .icon-box {
-      font-size: 22px;
-      margin-top: 2px;
-    }
-
-    .icon-gold { color: var(--primary-gold); }
-    .icon-blue { color: var(--secondary-blue); }
-
-    .detail-content {
-      flex: 1;
-    }
-
-    .detail-label {
-      font-size: 12px;
-      color: var(--text-muted);
+    .stat-label {
+      font-size: 10px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      font-weight: 500;
-      margin-bottom: 4px;
+      color: var(--muted-text);
     }
 
-    .detail-value {
-      font-size: 15px;
-      color: var(--text-dark);
-      line-height: 1.6;
-      font-weight: 500;
+    /* Section 3: Certified Energy & Chakra Specs */
+    .specs-section {
+      padding: 0 20px 50px 20px;
     }
 
-    .detail-value b {
-      color: var(--text-dark);
+    .section-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-style: italic;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--primary-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
       font-weight: 600;
     }
 
-    /* Deep Red Drapery Accent based on Ref Image */
-    .accent-drape {
-      margin-top: 40px;
-      height: 6px;
-      background-color: var(--deep-red-accent);
-      border-radius: 3px;
-      opacity: 0.15;
+    .spec-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 25px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      margin-bottom: 25px;
     }
 
-    /* Full-Page Footer */
-    .page-footer {
-      text-align: center;
-      padding: 40px 20px;
+    .spec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--dark-text);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .spec-body {
+      font-size: 13.5px;
+      color: var(--muted-text);
+      line-height: 1.7;
+    }
+
+    .highlight-text {
+      color: var(--dark-text);
+      font-weight: 500;
+    }
+
+    /* Section 4: Collection Showcase Grid */
+    .collection-section {
+      padding: 0 20px 60px 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .grid-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+    }
+
+    .grid-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .grid-content {
+      padding: 20px;
+    }
+
+    .grid-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .grid-desc {
       font-size: 12px;
-      color: var(--text-muted);
+      color: var(--muted-text);
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #111111;
+      color: var(--pure-white);
+      text-align: center;
+      padding: 50px 20px 30px 20px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--primary-gold);
+      margin-bottom: 10px;
+    }
+
+    .footer-sub {
+      font-size: 11px;
+      color: #888888;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .footer-badge {
+      display: inline-block;
+      background: rgba(197, 160, 89, 0.15);
+      border: 1px solid var(--primary-gold);
+      color: var(--primary-gold);
+      font-size: 11px;
+      padding: 8px 18px;
+      border-radius: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-copy {
+      font-size: 10px;
+      color: #555555;
+      border-top: 1px solid #222222;
+      padding-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Full-Page Hero Header -->
-  <div class="hero-section">
-    <div class="brand-header">
-      <div class="brand-name">JANIMA</div>
-      <div class="brand-sub">GEMS & JEWELS / KCA GROUP</div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-brand">JANIMA</div>
+    <div class="nav-badge">KCA GROUP</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-sub">Aura & Chakra Energy Certified</div>
+    <h1 class="hero-title">Light, Rendered Eternal.</h1>
+    <p class="hero-desc">Discover precision-crafted Ceylon Sapphires imbued with natural cosmic frequency and metaphysical energy balance.</p>
+  </header>
+
+  <!-- Hero Sapphire Image Card -->
+  <div class="main-image-container">
+    <div class="main-image-card">
+      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" alt="Natural Ceylon Sapphire Ring">
+      <div class="image-overlay-text">
+        <div class="overlay-title">Royal Ceylon Sapphire</div>
+        <div class="overlay-sub">100% Natural Metaphysical Grade Gemstone</div>
+      </div>
     </div>
-    
-    <div class="hero-title">LIGHT, ETERNAL.</div>
-    <div class="hero-subtitle">Authentic Aura & Chakra Energy Certified Ceylon Sapphires.</div>
   </div>
 
-  <!-- Primary Product Section -->
-  <div class="product-section">
-    <div class="gem-card">
-      <div class="gem-title">Ceylon Blue Sapphire</div>
-      <div class="gem-sub-description">Natural Energy Healing Certified Gemstone</div>
+  <!-- Quick Heritage Stats -->
+  <section class="stats-section">
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Natural Gem</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">Aura</div>
+      <div class="stat-label">Certified</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">Ceylon</div>
+      <div class="stat-label">Origin</div>
+    </div>
+  </section>
 
-      <div class="energy-details-box">
-        <!-- Chakra -->
-        <div class="detail-item">
-          <div class="icon-box icon-gold">✨</div>
-          <div class="detail-content">
-            <div class="detail-label">Chakra Balance</div>
-            <div class="detail-value"><b>Throat & Third Eye Chakra</b></div>
-          </div>
-        </div>
+  <!-- Metaphysical & Energy Specifications -->
+  <section class="specs-section">
+    <div class="section-header">
+      <div class="section-subtitle">Aura Alignment Specifications</div>
+      <h2 class="section-title">Energy Profile</h2>
+    </div>
 
-        <!-- Effect -->
-        <div class="detail-item">
-          <div class="icon-box icon-blue">💎</div>
-          <div class="detail-content">
-            <div class="detail-label">Energy Influence</div>
-            <div class="detail-value">
-              ශරීරයේ Aura (ප්‍රභා මණ්ඩලය) ශක්තිමත් කර, ඍණාත්මක ශක්තීන්ගෙන් ආරක්ෂාව සපයයි.
-            </div>
-          </div>
+    <!-- Spec 1: Chakra -->
+    <div class="spec-card">
+      <div class="spec-title">
+        <span>✨</span> Primary Chakra Focus
+      </div>
+      <div class="spec-body">
+        This gemstone actively aligns with the <span class="highlight-text">Throat Chakra (Vishuddha)</span> and the <span class="highlight-text">Third Eye Chakra (Ajna)</span>, promoting mental clarity, high intuition, and confident expression.
+      </div>
+    </div>
+
+    <!-- Spec 2: Aura Effect -->
+    <div class="spec-card">
+      <div class="spec-title">
+        <span>🛡️</span> Aura Protection & Balance
+      </div>
+      <div class="spec-body">
+        Empowers and stabilizes your natural aura field while deflecting negative subtle energies. It fosters internal peace, deep clarity, and physical vitality.
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Collection Showcase Gallery -->
+  <section class="collection-section">
+    <div class="section-header">
+      <div class="section-subtitle">Exquisite Craftsmanship</div>
+      <h2 class="section-title">Featured High Jewelry</h2>
+    </div>
+
+    <div class="grid-container">
+      <!-- Gem 1 -->
+      <div class="grid-card">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop" alt="Blue Sapphire Ring Design">
+        <div class="grid-content">
+          <div class="grid-title">The Royal Sapphire Solitaire</div>
+          <div class="grid-desc">Ethically sourced Natural Sapphire set in 18k solid gold frame.</div>
         </div>
       </div>
 
-      <div class="accent-drape"></div>
+      <!-- Gem 2 -->
+      <div class="grid-card">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop" alt="Luxury Gemstone Pendant">
+        <div class="grid-content">
+          <div class="grid-title">Aura Radiant Pendant</div>
+          <div class="grid-desc">Designed to sit close to the chest for optimal Chakra resonance.</div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Minimal Footer -->
-  <div class="page-footer">
-    🔒 Authenticated via Janima QR Verification • All Rights Reserved
-  </div>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-brand">JANIMA</div>
+    <div class="footer-sub">GEMS & JEWELS • KCA GROUP</div>
+    
+    <div class="footer-badge">
+      🔒 Authenticated via Janima QR System
+    </div>
+
+    <div class="footer-copy">
+      © 2026 JANIMA GEMS & JEWELS. All Rights Reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
