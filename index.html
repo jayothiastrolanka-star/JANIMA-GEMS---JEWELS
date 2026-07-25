@@ -1,30 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Janima Gems & Jewels</title>
+  <title>Janima Gems & Jewels - Luxury Ceylon Blue Sapphire</title>
+  
+  <!-- Modern Google Fonts Support (Clean Sinhala & Luxury English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: sans-serif; background: #FAFAF8; color: #2C2C2C; margin: 0; padding: 0; }
-    .header { text-align: center; padding: 20px; background: #FFF; border-bottom: 1px solid #EEE; }
-    .card { max-width: 400px; margin: 20px auto; background: #FFF; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    .title { font-size: 20px; font-weight: bold; color: #D4AF37; }
-    .box { background: #F9F5FF; padding: 15px; border-radius: 10px; margin-top: 15px; border-left: 4px solid #D4AF37; }
+    /* Design Variables based on Reference Image */
+    :root {
+      --primary-gold: #C5A059; /* Matching the reference image gold */
+      --secondary-blue: #2844B4; /* Deep Blue for Sapphire Theme */
+      --soft-cream-bg: #FAF8F5; /* Matches reference image bg */
+      --deep-red-accent: #8E1F30; /* Matches reference image drape */
+      --text-dark: #222222;
+      --text-muted: #666666;
+      --white-pure: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
+      background-color: var(--soft-cream-bg);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Luxury Full-Page Header */
+    .hero-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, var(--white-pure) 0%, #FAF8F5 100%);
+      border-bottom: 1px solid #F0EBE1;
+    }
+
+    .brand-header {
+      margin-bottom: 15px;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--primary-gold);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--text-dark);
+      margin: 30px 0 10px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 300px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Product Highlight Area */
+    .product-section {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      margin-top: -30px;
+    }
+
+    .gem-card {
+      width: 100%;
+      max-width: 360px;
+      background: var(--white-pure);
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+      border: 1px solid #EFEAE1;
+      text-align: left;
+    }
+
+    .gem-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--text-dark);
+      margin: 0 0 5px 0;
+    }
+
+    .gem-sub-description {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      border-bottom: 1px solid #F0EBE1;
+      padding-bottom: 15px;
+    }
+
+    /* Energy/Chakra Section */
+    .energy-details-box {
+      margin-top: 20px;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .icon-box {
+      font-size: 22px;
+      margin-top: 2px;
+    }
+
+    .icon-gold { color: var(--primary-gold); }
+    .icon-blue { color: var(--secondary-blue); }
+
+    .detail-content {
+      flex: 1;
+    }
+
+    .detail-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .detail-value {
+      font-size: 15px;
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .detail-value b {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    /* Deep Red Drapery Accent based on Ref Image */
+    .accent-drape {
+      margin-top: 40px;
+      height: 6px;
+      background-color: var(--deep-red-accent);
+      border-radius: 3px;
+      opacity: 0.15;
+    }
+
+    /* Full-Page Footer */
+    .page-footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h2 style="margin:0;">JANIMA GEMS & JEWELS</h2>
-    <small style="color:#D4AF37;">KCA GROUP</small>
+
+  <!-- Full-Page Hero Header -->
+  <div class="hero-section">
+    <div class="brand-header">
+      <div class="brand-name">JANIMA</div>
+      <div class="brand-sub">GEMS & JEWELS / KCA GROUP</div>
+    </div>
+    
+    <div class="hero-title">LIGHT, ETERNAL.</div>
+    <div class="hero-subtitle">Authentic Aura & Chakra Energy Certified Ceylon Sapphires.</div>
   </div>
-  <div class="card">
-    <div class="title">Natural Ceylon Sapphire</div>
-    <p>Aura & Chakra Energy Healing Certified Gemstone</p>
-    <div class="box">
-      <h4>✨ Aura & Chakra Energy</h4>
-      <p>• <b>Chakra:</b> Throat & Third Eye</p>
-      <p>• <b>Effect:</b> ශරීරයේ Aura කලාපය ශක්තිමත් කර ඍණාත්මක ශක්තීන්ගෙන් ආරක්ෂා කරයි.</p>
+
+  <!-- Primary Product Section -->
+  <div class="product-section">
+    <div class="gem-card">
+      <div class="gem-title">Ceylon Blue Sapphire</div>
+      <div class="gem-sub-description">Natural Energy Healing Certified Gemstone</div>
+
+      <div class="energy-details-box">
+        <!-- Chakra -->
+        <div class="detail-item">
+          <div class="icon-box icon-gold">✨</div>
+          <div class="detail-content">
+            <div class="detail-label">Chakra Balance</div>
+            <div class="detail-value"><b>Throat & Third Eye Chakra</b></div>
+          </div>
+        </div>
+
+        <!-- Effect -->
+        <div class="detail-item">
+          <div class="icon-box icon-blue">💎</div>
+          <div class="detail-content">
+            <div class="detail-label">Energy Influence</div>
+            <div class="detail-value">
+              ශරීරයේ Aura (ප්‍රභා මණ්ඩලය) ශක්තිමත් කර, ඍණාත්මක ශක්තීන්ගෙන් ආරක්ෂාව සපයයි.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accent-drape"></div>
     </div>
   </div>
+
+  <!-- Minimal Footer -->
+  <div class="page-footer">
+    🔒 Authenticated via Janima QR Verification • All Rights Reserved
+  </div>
+
 </body>
 </html>
