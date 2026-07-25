@@ -1,3 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janima Gems & Jewels | Sapphire Family & Neuro-Astrology Certification</title>
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-gold: #C5A059;
+      --gold-hover: #B08C45;
+      --soft-cream: #FAF8F5;
+      --card-cream: #F4F0EA;
+      --dark-text: #1A1A1A;
+      --muted-text: #666666;
+      --pure-white: #FFFFFF;
+      --border-color: #E6E0D4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--soft-cream);
+      color: var(--dark-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Top Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 25px;
+      background-color: rgba(250, 248, 245, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(5px);
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--dark-text);
+    }
+
+    .nav-badge {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: var(--primary-gold);
+      border: 1px solid var(--primary-gold);
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Hero Banner */
+    .hero {
+      text-align: center;
+      padding: 50px 20px 30px 20px;
+    }
+
+    .hero-sub {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 15px;
+      color: var(--dark-text);
+    }
+
+    .hero-desc {
+      font-size: 13px;
+      color: var(--muted-text);
+      max-width: 340px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* Neuro-Astrology Science Section */
+    .science-section {
+      padding: 0 20px 40px 20px;
+    }
+
+    .science-card {
+      background: var(--pure-white);
+      border-radius: 20px;
+      padding: 25px 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .science-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--dark-text);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .science-subtitle {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .science-text {
+      font-size: 13px;
+      color: var(--muted-text);
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .science-text b {
+      color: var(--dark-text);
+    }
+
+    /* Collection Section Grid */
+    .collection-section {
+      padding: 0 20px 60px 20px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-style: italic;
+    }
+
+    .section-subtitle {
+      font-size: 11px;
+      color: var(--primary-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .grid-card {
+      background: var(--pure-white);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .grid-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .grid-content {
+      padding: 22px;
+    }
+
+    .grid-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark-text);
+    }
+
+    .grid-tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .grid-planet {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--dark-text);
+      margin-bottom: 12px;
+    }
+
+    .grid-desc {
+      font-size: 12.5px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      border-top: 1px solid var(--border-color);
+      padding-top: 12px;
+    }
+
     /* Contact Section */
     .contact-section {
       padding: 40px 20px;
@@ -107,94 +335,125 @@
 
   <!-- Hero Section -->
   <header class="hero">
-    <div class="hero-sub">Certified Energy Gemstones</div>
-    <h1 class="hero-title">Light, Rendered Eternal.</h1>
-    <p class="hero-desc">Discover precision-cut natural Sri Lankan & global gemstones imbued with cosmic frequency alignment.</p>
+    <div class="hero-sub">Neuro-Cosmic Frequency Alignment</div>
+    <h1 class="hero-title">Cosmic Waves & Neural Resonance</h1>
+    <p class="hero-desc">Connecting Planetary Radiations, Human Neuronal Networks, and the Sapphire Corundum Family.</p>
   </header>
 
-  <!-- Featured Hero Image Card -->
-  <div class="main-image-container">
-    <div class="main-image-card">
-      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" alt="Natural Ceylon Sapphire">
-      <div class="image-overlay-text">
-        <div class="overlay-title">Natural Ceylon Sapphire</div>
-        <div class="overlay-sub">Throat & Third Eye Chakra Alignment</div>
+  <!-- Neuro-Astrology Science Breakdown Section -->
+  <section class="science-section">
+    <div class="science-card">
+      <div class="science-subtitle">Scientific & Metaphysical Synergy</div>
+      <h2 class="science-title">Planets & The Human Nervous System</h2>
+      
+      <div class="science-text">
+        <b>1. Planetary Electromagnetic Frequencies:</b> Celestial bodies continuously emit subtle cosmic radiation and electromagnetic frequencies. In Vedic Astrology, each planet controls specific biological energy channels (Nadis).
       </div>
-    </div>
-  </div>
 
-  <!-- Stats Section -->
-  <section class="stats-section">
-    <div class="stat-item">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">Natural Gems</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Aura</div>
-      <div class="stat-label">Certified</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Global</div>
-      <div class="stat-label">Delivery</div>
+      <div class="science-text">
+        <b>2. Neuronal Signal Modulation:</b> Our central nervous system contains billions of <b>Neurons</b> that communicate via electrochemical impulses. Planetary ray fluctuations directly influence neurotransmitter activity, emotional stability, and cognitive clarity.
+      </div>
+
+      <div class="science-text">
+        <b>3. Sapphire Crystal Prism Effect:</b> Natural Corundum (Sapphires) acts as an optical and electromagnetic filter. Touching the skin, a natural sapphire refines planetary light frequencies, transmitting calibrated energy directly through neural pathways to harmonize mind and body.
+      </div>
     </div>
   </section>
 
-  <!-- Gemstone Collection Grid -->
+  <!-- Sapphire Family Collection Section -->
   <section class="collection-section">
     <div class="section-header">
-      <div class="section-subtitle">Certified Metaphysical Grade</div>
-      <h2 class="section-title">The Master Collection</h2>
+      <div class="section-subtitle">Corundum Family • 8 Varieties</div>
+      <h2 class="section-title">The Sapphire Spectrum</h2>
     </div>
 
     <div class="grid-container">
       
       <!-- 1. Blue Sapphire -->
       <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop" alt="Ceylon Blue Sapphire">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop" alt="Blue Sapphire">
         <div class="grid-content">
           <div class="grid-tag">Chakra: Throat & Third Eye</div>
-          <div class="grid-title">Ceylon Blue Sapphire</div>
-          <div class="grid-desc">Strengthens the aura field and protects against negative energy vibrations while enhancing mental clarity and intuition.</div>
+          <div class="grid-planet">Planetary Governor: Saturn (Shanideva)</div>
+          <div class="grid-title">1. Blue Sapphire (Indranila)</div>
+          <div class="grid-desc">Calms hyperactive neural firings, sharpens discipline, and protects the sciatic/central nervous system against stress blockages.</div>
         </div>
       </div>
 
-      <!-- 2. Emerald -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1000&auto=format&fit=crop" alt="Natural Emerald">
-        <div class="grid-content">
-          <div class="grid-tag">Chakra: Heart Chakra (Anahata)</div>
-          <div class="grid-title">Natural Emerald</div>
-          <div class="grid-desc">Promotes emotional harmony, abundant prosperity, and revitalization of cardiac aura vibration.</div>
-        </div>
-      </div>
-
-      <!-- 3. Natural Ruby -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop" alt="Natural Ruby Gemstone">
-        <div class="grid-content">
-          <div class="grid-tag">Chakra: Root Chakra (Muladhara)</div>
-          <div class="grid-title">Pigeon Blood Ruby</div>
-          <div class="grid-desc">Ignites vitality, courage, and leadership potential while grounding core spiritual energies.</div>
-        </div>
-      </div>
-
-      <!-- 4. Yellow Sapphire -->
+      <!-- 2. Yellow Sapphire -->
       <div class="grid-card">
         <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop" alt="Yellow Sapphire">
         <div class="grid-content">
-          <div class="grid-tag">Chakra: Solar Plexus (Manipura)</div>
-          <div class="grid-title">Ceylon Yellow Sapphire</div>
-          <div class="grid-desc">Attracts wisdom, wealth, and higher knowledge while balancing intellect and solar energy.</div>
+          <div class="grid-tag">Chakra: Solar Plexus</div>
+          <div class="grid-planet">Planetary Governor: Jupiter (Guru)</div>
+          <div class="grid-title">2. Yellow Sapphire (Pushparaga)</div>
+          <div class="grid-desc">Stimulates brain memory centers, enhances synaptic plasticity, and fosters wisdom, wealth, and higher spiritual comprehension.</div>
         </div>
       </div>
 
-      <!-- 5. Red Coral -->
+      <!-- 3. Padparadscha Sapphire -->
       <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=1000&auto=format&fit=crop" alt="Natural Red Coral">
+        <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=1000&auto=format&fit=crop" alt="Padparadscha Sapphire">
         <div class="grid-content">
-          <div class="grid-tag">Chakra: Sacral Chakra (Svadhisthana)</div>
-          <div class="grid-title">Organic Red Coral</div>
-          <div class="grid-desc">Enhances physical stamina, willpower, and protection against energy blockages.</div>
+          <div class="grid-tag">Chakra: Sacral & Heart</div>
+          <div class="grid-planet">Planetary Governor: Sun & Mercury Resonance</div>
+          <div class="grid-title">3. Padparadscha Sapphire</div>
+          <div class="grid-desc">Rare lotus-colored corundum. Harmonizes the autonomic nervous system, inspiring deep creative intelligence and unconditional joy.</div>
+        </div>
+      </div>
+
+      <!-- 4. Pink Sapphire -->
+      <div class="grid-card">
+        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop" alt="Pink Sapphire">
+        <div class="grid-content">
+          <div class="grid-tag">Chakra: Heart Chakra (Anahata)</div>
+          <div class="grid-planet">Planetary Governor: Sun & Venus</div>
+          <div class="grid-title">4. Pink Sapphire</div>
+          <div class="grid-desc">Soothes emotional trauma in the vagus nerve system, restoring cardiovascular aura warmth and heart-mind coherence.</div>
+        </div>
+      </div>
+
+      <!-- 5. Green Sapphire -->
+      <div class="grid-card">
+        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1000&auto=format&fit=crop" alt="Green Sapphire">
+        <div class="grid-content">
+          <div class="grid-tag">Chakra: Heart Chakra</div>
+          <div class="grid-planet">Planetary Governor: Mercury (Budha)</div>
+          <div class="grid-title">5. Green Sapphire</div>
+          <div class="grid-desc">Balances sensory neurons, enhances speech articulation, and aids rapid cognitive processing and logical clarity.</div>
+        </div>
+      </div>
+
+      <!-- 6. White / Colorless Sapphire -->
+      <div class="grid-card">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop" alt="White Sapphire">
+        <div class="grid-content">
+          <div class="grid-tag">Chakra: Crown Chakra (Sahasrara)</div>
+          <div class="grid-planet">Planetary Governor: Venus (Shukra)</div>
+          <div class="grid-title">6. White Sapphire (Colorless)</div>
+          <div class="grid-desc">Refine pineal gland secretions, elevating aesthetic perception, luxury frequency, and high-vibration nerve cellular health.</div>
+        </div>
+      </div>
+
+      <!-- 7. Star Sapphire -->
+      <div class="grid-card">
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" alt="Star Sapphire">
+        <div class="grid-content">
+          <div class="grid-tag">Chakra: All Subtle Chakras</div>
+          <div class="grid-planet">Planetary Governor: Ketu / Moon Dynamics</div>
+          <div class="grid-title">7. Star Sapphire (Asterism)</div>
+          <div class="grid-desc">Displays a 6-ray star effect. Anchors scattered subconscious thoughts, protecting neural networks from aura drain and illusion.</div>
+        </div>
+      </div>
+
+      <!-- 8. Violet / Purple Sapphire -->
+      <div class="grid-card">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop" alt="Purple Sapphire">
+        <div class="grid-content">
+          <div class="grid-tag">Chakra: Third Eye & Crown</div>
+          <div class="grid-planet">Planetary Governor: Saturn & Rahu Dynamics</div>
+          <div class="grid-title">8. Violet Sapphire</div>
+          <div class="grid-desc">Awakens higher spiritual receptors in the cerebral cortex, guiding intense mental focus, psychic clarity, and inner peace.</div>
         </div>
       </div>
 
