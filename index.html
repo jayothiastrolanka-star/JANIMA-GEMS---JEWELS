@@ -74,7 +74,7 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 50px 20px 20px;
+      padding: 40px 20px 10px;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -90,11 +90,11 @@
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
+      font-size: 32px;
       line-height: 1.25;
       font-weight: 400;
       font-style: italic;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       color: var(--dark-text);
     }
 
@@ -106,57 +106,13 @@
       font-weight: 300;
     }
 
-    /* Main Featured Card */
-    .main-image-container {
-      padding: 0 8%;
-      margin: 30px auto;
-      max-width: 1000px;
-    }
-
-    .main-image-card {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-      border: 1px solid var(--border-color);
-    }
-
-    .main-image-card img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .image-overlay-text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 25px;
-      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
-      color: var(--pure-white);
-    }
-
-    .overlay-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .overlay-sub {
-      font-size: 11px;
-      opacity: 0.85;
-      font-weight: 300;
-    }
-
     /* Category Filter Section */
     .filter-section {
       display: flex;
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
-      padding: 10px 20px 30px;
+      padding: 20px 20px 25px;
     }
 
     .filter-btn {
@@ -181,12 +137,12 @@
 
     /* Gemstone Grid */
     .collection-section {
-      padding: 0 8% 60px;
+      padding: 0 6% 60px;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .section-title {
@@ -205,112 +161,78 @@
 
     .gem-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 18px;
     }
 
+    /* Clean Loose Gem Card Style (Matching Screenshot) */
     .gem-card {
       position: relative;
-      background: var(--pure-white);
-      border-radius: 14px;
+      background: #EFECE6;
+      border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border-color);
       box-shadow: 0 4px 15px rgba(0,0,0,0.03);
       cursor: pointer;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .gem-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       border-color: var(--primary-gold);
     }
 
     .gem-card img {
       width: 100%;
-      height: 200px;
+      height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.3s ease;
     }
 
-    .gem-card-info {
-      padding: 15px;
+    .gem-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Floating Text Overlay over Gem (Screenshot Style) */
+    .gem-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      background: var(--pure-white);
+      padding: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .gem-card:hover .gem-card-overlay {
+      background: rgba(0, 0, 0, 0.25);
     }
 
     .gem-card-title {
       font-family: 'Playfair Display', serif;
-      color: var(--dark-text);
-      font-size: 16px;
+      color: #FFFFFF;
+      font-size: 18px;
       font-weight: 600;
-      margin-bottom: 4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      line-height: 1.2;
     }
 
-    .gem-card-tag {
+    .gem-card-sub {
       font-size: 10px;
-      color: var(--primary-gold);
-      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
       letter-spacing: 1px;
-      font-weight: 500;
-    }
-
-    /* Neuro-Astrology Science Section */
-    .science-section {
-      padding: 0 8% 50px;
-    }
-
-    .science-card {
-      background: var(--pure-white);
-      border-radius: 18px;
-      padding: 30px;
-      border: 1px solid var(--border-color);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .science-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--dark-text);
-      margin-bottom: 4px;
-      text-align: center;
-    }
-
-    .science-subtitle {
-      font-size: 10px;
-      letter-spacing: 2px;
+      margin-top: 4px;
       text-transform: uppercase;
-      color: var(--primary-gold);
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .science-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .science-box {
-      background: var(--card-cream);
-      padding: 18px;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
-
-    .science-box-title {
-      font-weight: 600;
-      font-size: 13px;
-      color: var(--dark-text);
-      margin-bottom: 6px;
-    }
-
-    .science-box-text {
-      font-size: 11px;
-      color: var(--muted-text);
-      line-height: 1.5;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
     }
 
     /* Contact Section */
@@ -419,9 +341,10 @@
 
     .modal-header-img {
       width: 100%;
-      height: 220px;
+      height: 240px;
       object-fit: cover;
       position: relative;
+      background-color: #EFECE6;
     }
 
     .modal-close-btn {
@@ -555,134 +478,208 @@
 
   <!-- Hero Section -->
   <header class="hero">
-    <div class="hero-sub">Aura & Frequency Certified</div>
-    <h1 class="hero-title">Light, Rendered Eternal.</h1>
-    <p class="hero-desc">Discover precision-cut Sri Lankan and global gemstones imbued with natural cosmic frequency alignment and verified chemical purity.</p>
+    <div class="hero-sub">From Sri Lanka & Beyond</div>
+    <h1 class="hero-title">High Gemology Showcase</h1>
+    <p class="hero-desc">Explore 20 certified gemstone varieties precision-cut for maximum refractive brilliance and cosmic energy resonance.</p>
   </header>
-
-  <!-- Main Highlight Photo Card -->
-  <div class="main-image-container">
-    <div class="main-image-card">
-      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" alt="Royal Ceylon Sapphire Ring">
-      <div class="image-overlay-text">
-        <div class="overlay-title">Royal Ceylon Sapphire</div>
-        <div class="overlay-sub">100% Natural Unheated Specimen • Ratnapura Origin</div>
-      </div>
-    </div>
-  </div>
 
   <!-- Filter Category Bar -->
   <div class="filter-section">
-    <button class="filter-btn active" onclick="filterGems('all')">All Varieties</button>
+    <button class="filter-btn active" onclick="filterGems('all')">All 20 Varieties</button>
     <button class="filter-btn" onclick="filterGems('sapphire')">Sapphires</button>
-    <button class="filter-btn" onclick="filterGems('ruby')">Rubies</button>
-    <button class="filter-btn" onclick="filterGems('rare')">Collector Rare</button>
+    <button class="filter-btn" onclick="filterGems('ruby-spinel')">Rubies & Spinels</button>
+    <button class="filter-btn" onclick="filterGems('rare')">Rare & Collector</button>
   </div>
 
-  <!-- Gemstone Collection Grid -->
+  <!-- Gemstone Collection Grid (Exactly 20 Varieties) -->
   <section class="collection-section">
     <div class="section-header">
-      <div class="section-subtitle">Touch Card For Gemological Analysis</div>
-      <h2 class="section-title">The Gemstone Spectrum</h2>
+      <div class="section-subtitle">Click Any Variety For Full Technical Data</div>
+      <h2 class="section-title">The 20 Gemstone Varieties</h2>
     </div>
 
     <div class="gem-grid" id="gemGrid">
 
-      <!-- 1. Blue Sapphire -->
+      <!-- 1. Blue Sapphires -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('blue')">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop" alt="Blue Sapphire">
-        <div class="gem-card-info">
-          <div class="gem-card-title">Blue Sapphire</div>
-          <div class="gem-card-tag">Saturn Energy</div>
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop" alt="Blue Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Blue Sapphires</div>
+          <div class="gem-card-sub">Saturn Energy</div>
         </div>
       </div>
 
       <!-- 2. Ruby -->
-      <div class="gem-card" data-category="ruby" onclick="openGemModal('ruby')">
-        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop" alt="Ruby Gemstone">
-        <div class="gem-card-info">
-          <div class="gem-card-title">Natural Ruby</div>
-          <div class="gem-card-tag">Sun Vitality</div>
+      <div class="gem-card" data-category="ruby-spinel" onclick="openGemModal('ruby')">
+        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop" alt="Ruby">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Ruby</div>
+          <div class="gem-card-sub">Sun Vitality</div>
         </div>
       </div>
 
-      <!-- 3. Padparadscha Sapphire -->
+      <!-- 3. Padparadscha -->
       <div class="gem-card" data-category="rare" onclick="openGemModal('padparadscha')">
-        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Padparadscha Sapphire">
-        <div class="gem-card-info">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Padparadscha">
+        <div class="gem-card-overlay">
           <div class="gem-card-title">Padparadscha</div>
-          <div class="gem-card-tag">Lotus Spectrum</div>
+          <div class="gem-card-sub">Lotus Pink-Orange</div>
         </div>
       </div>
 
-      <!-- 4. Teal Sapphire -->
+      <!-- 4. Teal Sapphires -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('teal')">
-        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop" alt="Teal Sapphire">
-        <div class="gem-card-info">
-          <div class="gem-card-title">Teal Sapphire</div>
-          <div class="gem-card-tag">Ocean Bi-Color</div>
+        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop" alt="Teal Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Teal Sapphires</div>
+          <div class="gem-card-sub">Ocean Green-Blue</div>
         </div>
       </div>
 
-      <!-- 5. White Sapphire -->
+      <!-- 5. White Sapphires -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('white')">
-        <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="White Sapphire">
-        <div class="gem-card-info">
-          <div class="gem-card-title">White Sapphire</div>
-          <div class="gem-card-tag">Venus Clarity</div>
+        <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="White Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">White Sapphires</div>
+          <div class="gem-card-sub">Venus Diamond Substitute</div>
         </div>
       </div>
 
-      <!-- 6. Pink Sapphire -->
+      <!-- 6. Pink Sapphires -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('pink')">
-        <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=600&auto=format&fit=crop" alt="Pink Sapphire">
-        <div class="gem-card-info">
-          <div class="gem-card-title">Pink Sapphire</div>
-          <div class="gem-card-tag">Heart Resonance</div>
+        <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=600&auto=format&fit=crop" alt="Pink Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Pink Sapphires</div>
+          <div class="gem-card-sub">Vivid Heart Pink</div>
         </div>
       </div>
 
-      <!-- 7. Yellow Sapphire -->
+      <!-- 7. Yellow Sapphires -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('yellow')">
-        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Yellow Sapphire">
-        <div class="gem-card-info">
-          <div class="gem-card-title">Yellow Sapphire</div>
-          <div class="gem-card-tag">Jupiter Abundance</div>
+        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Yellow Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Yellow Sapphires</div>
+          <div class="gem-card-sub">Jupiter Pushparaga</div>
         </div>
       </div>
 
-      <!-- 8. Star Sapphire -->
+      <!-- 8. Star Sapphires -->
       <div class="gem-card" data-category="rare" onclick="openGemModal('star')">
-        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" alt="Star Sapphire">
-        <div class="gem-card-info">
-          <div class="gem-card-title">Star Sapphire</div>
-          <div class="gem-card-tag">Asterism Effect</div>
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" alt="Star Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Star Sapphires</div>
+          <div class="gem-card-sub">6-Ray Asterism</div>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- Science Section -->
-  <section class="science-section">
-    <div class="science-card">
-      <div class="science-subtitle">Scientific & Cosmic Synergy</div>
-      <h2 class="science-title">Planets, Neurons & Crystals</h2>
-      
-      <div class="science-grid" style="margin-top: 20px;">
-        <div class="science-box">
-          <div class="science-box-title">1. Cosmic Frequencies</div>
-          <div class="science-box-text">Celestial bodies emit subtle electromagnetic wave frequencies that interact with biological energy fields.</div>
-        </div>
-        <div class="science-box">
-          <div class="science-box-title">2. Neural Signal Modulation</div>
-          <div class="science-box-text">Natural mineral structures act as physical optical filters, stabilizing neural response rates.</div>
-        </div>
-        <div class="science-box">
-          <div class="science-box-title">3. Lattice Refractive Index</div>
-          <div class="science-box-text">High-density crystalline lattices refine ambient radiation into harmonious wavelengths.</div>
+      <!-- 9. Green Sapphires -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('green')">
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop" alt="Green Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Green Sapphires</div>
+          <div class="gem-card-sub">Mercury Focus</div>
         </div>
       </div>
+
+      <!-- 10. Chrysoberyl Cat's Eye -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('catseye')">
+        <img src="https://images.unsplash.com/photo-1611591475165-f481c7f465c4?q=80&w=600&auto=format&fit=crop" alt="Chrysoberyl Cat's Eye">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Cat's Eye</div>
+          <div class="gem-card-sub">Ketu Shielding</div>
+        </div>
+      </div>
+
+      <!-- 11. Alexandrite -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('alexandrite')">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Alexandrite">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Alexandrite</div>
+          <div class="gem-card-sub">Color Change Magic</div>
+        </div>
+      </div>
+
+      <!-- 12. Red Spinel -->
+      <div class="gem-card" data-category="ruby-spinel" onclick="openGemModal('redspinel')">
+        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop" alt="Red Spinel">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Red Spinel</div>
+          <div class="gem-card-sub">Flame Red Brilliance</div>
+        </div>
+      </div>
+
+      <!-- 13. Cobalt Blue Spinel -->
+      <div class="gem-card" data-category="ruby-spinel" onclick="openGemModal('cobalt')">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop" alt="Cobalt Blue Spinel">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Cobalt Spinel</div>
+          <div class="gem-card-sub">Electric Blue</div>
+        </div>
+      </div>
+
+      <!-- 14. Emerald -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('emerald')">
+        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop" alt="Emerald">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Emerald</div>
+          <div class="gem-card-sub">Vivid Green Beryl</div>
+        </div>
+      </div>
+
+      <!-- 15. Purple Sapphire -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('purple')">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" alt="Purple Sapphire">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Purple Sapphire</div>
+          <div class="gem-card-sub">Royal Violet</div>
+        </div>
+      </div>
+
+      <!-- 16. Orange Sapphire -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('orange')">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Orange Sapphire">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Orange Sapphire</div>
+          <div class="gem-card-sub">Sunset Orange</div>
+        </div>
+      </div>
+
+      <!-- 17. Hessonite Garnet -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('hessonite')">
+        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Hessonite Garnet">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Hessonite Garnet</div>
+          <div class="gem-card-sub">Gomedha / Rahu</div>
+        </div>
+      </div>
+
+      <!-- 18. Tsavorite Garnet -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('tsavorite')">
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop" alt="Tsavorite Garnet">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Tsavorite Garnet</div>
+          <div class="gem-card-sub">Chrome Green</div>
+        </div>
+      </div>
+
+      <!-- 19. Aquamarine -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('aquamarine')">
+        <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="Aquamarine">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Aquamarine</div>
+          <div class="gem-card-sub">Sky Blue Beryl</div>
+        </div>
+      </div>
+
+      <!-- 20. White Zircon -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('zircon')">
+        <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="White Zircon">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Ceylon White Zircon</div>
+          <div class="gem-card-sub">High Fire Refraction</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -723,7 +720,7 @@
       
       <div class="modal-body">
         <h3 class="modal-title" id="modalTitle">Gemstone Title</h3>
-        <div class="modal-subtitle" id="modalSub">Corundum Family</div>
+        <div class="modal-subtitle" id="modalSub">Family Classification</div>
 
         <table class="spec-table">
           <tr>
@@ -732,7 +729,7 @@
           </tr>
           <tr>
             <td class="spec-label">Trace Elements</td>
-            <td class="spec-value" id="modalTrace">Iron & Titanium (Fe²⁺, Ti⁴⁺)</td>
+            <td class="spec-value" id="modalTrace">Chromophore Ions</td>
           </tr>
           <tr>
             <td class="spec-label">Crystal System</td>
@@ -740,99 +737,219 @@
           </tr>
           <tr>
             <td class="spec-label">Mohs Hardness</td>
-            <td class="spec-value" id="modalHardness">9.0 (High Resistance)</td>
+            <td class="spec-value" id="modalHardness">9.0 Mohs Scale</td>
           </tr>
         </table>
 
         <div class="modal-desc" id="modalDesc">
-          Detailed breakdown text goes here...
+          Detailed gemological description.
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Dynamic Logic generated at the end -->
+  <!-- Complete 20 Varieties Data Logic -->
   <script>
     const gemData = {
       blue: {
         title: "Blue Sapphire",
-        subtitle: "Corundum Variety • Saturn Alignment",
+        subtitle: "Corundum Variety • Saturn (Shani) Alignment",
         img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop",
-        formula: "Al₂O₃ (Aluminum Oxide)",
-        trace: "Iron (Fe²⁺) + Titanium (Ti⁴⁺) ICT",
-        crystal: "Trigonal / Hexagonal Habit",
+        formula: "Al₂O₃",
+        trace: "Iron (Fe²⁺) + Titanium (Ti⁴⁺)",
+        crystal: "Trigonal System",
         hardness: "9.0 Mohs Scale",
-        desc: "Coloration arises from intervalence charge transfer between iron and titanium ions in the lattice. Highly valued in Vedic gemology to balance Saturn energy and support central focus."
+        desc: "Coloration arises from charge transfer between iron and titanium. Highly valued in Vedic gemology to balance Saturn energy and enhance focus."
       },
       ruby: {
-        title: "Natural Ruby",
-        subtitle: "Corundum Variety • Sun Alignment",
+        title: "Pigeon Blood Ruby",
+        subtitle: "Corundum Variety • Sun (Surya) Vitality",
         img: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop",
         formula: "Al₂O₃:Cr³⁺",
-        trace: "Chromium Trace Impurities (Cr³⁺)",
+        trace: "Chromium (Cr³⁺)",
         crystal: "Hexagonal Prismatic",
         hardness: "9.0 Mohs Scale",
-        desc: "Chromium replacing aluminum in the crystal structure creates its vivid red color and red UV fluorescence. Associated with vitality, solar strength, and blood flow harmony."
+        desc: "Chromium replacing aluminum creates vivid red fluorescence. Revered as the king of gemstones associated with power and vitality."
       },
       padparadscha: {
         title: "Padparadscha Sapphire",
-        subtitle: "King of Sapphires • Lotus Spectrum",
+        subtitle: "Rare Corundum • Pink-Orange Lotus",
         img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
-        formula: "Al₂O₃ (Balanced Cr³⁺ + Fe³⁺)",
-        trace: "Chromium + Ferric Iron",
+        formula: "Al₂O₃ (Cr³⁺ + Fe³⁺)",
+        trace: "Balanced Chromium & Ferric Iron",
         crystal: "Trigonal System",
         hardness: "9.0 Mohs Scale",
-        desc: "An exceptionally rare mixture of delicate pink and lotus orange tones. Celebrated globally for encouraging heart chakra equilibrium and profound mental peace."
+        desc: "An exceptionally rare mixture of delicate lotus pink and sunset orange tones, iconic to Sri Lankan gem gravels."
       },
       teal: {
         title: "Teal Sapphire",
-        subtitle: "Bi-Color Spectrum • Multi-Element",
+        subtitle: "Bi-Color Corundum • Ocean Spectrum",
         img: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop",
         formula: "Al₂O₃ (Fe / Ti Rich)",
         trace: "High Iron & Titanium Concentration",
-        crystal: "Trigonal Crystal Habit",
+        crystal: "Trigonal Habit",
         hardness: "9.0 Mohs Scale",
-        desc: "Features naturally blended ocean green and rich blue bands resulting from localized iron concentration shifts during deep mantle crystal growth."
+        desc: "Exhibits naturally blended deep forest green and ocean blue hues formed by localized iron concentration shifts."
       },
       white: {
         title: "White Sapphire",
-        subtitle: "Uncolored Corundum • Venus Alignment",
+        subtitle: "Pure Uncolored Corundum • Venus (Shukra)",
         img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop",
-        formula: "Al₂O₃ (Pure Form)",
-        trace: "None (Impurity Free)",
+        formula: "Al₂O₃ (Pure)",
+        trace: "Impurity Free",
         crystal: "Trigonal Bipyramidal",
         hardness: "9.0 Mohs Scale",
-        desc: "A pure aluminum oxide crystal free from foreign color-inducing chromophore impurities. Refracts full spectrum light to foster Venusian creative balance."
+        desc: "Pure aluminum oxide crystal without chromophore impurities. A classic natural alternative to diamond for Venusian harmony."
       },
       pink: {
         title: "Pink Sapphire",
-        subtitle: "Corundum Variety • Heart Chakra Focus",
+        subtitle: "Corundum Variety • Heart Energy",
         img: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=600&auto=format&fit=crop",
-        formula: "Al₂O₃:Cr³⁺ (Low Density)",
-        trace: "Low Level Chromium (Cr³⁺)",
+        formula: "Al₂O₃:Cr³⁺",
+        trace: "Low Level Chromium",
         crystal: "Trigonal System",
         hardness: "9.0 Mohs Scale",
-        desc: "Contains subtle amounts of chromium that bestow a delicate pink sheen. Ideal for calming emotional stress and refining subtle energy channels."
+        desc: "Subtle chromium concentrations yield radiant magenta and bubblegum pink tones celebrated in fine jewelry."
       },
       yellow: {
         title: "Yellow Sapphire",
-        subtitle: "Corundum Variety • Jupiter Alignment",
+        subtitle: "Corundum Variety • Jupiter (Guru) Abundance",
         img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop",
         formula: "Al₂O₃:Fe³⁺",
-        trace: "Ferric Iron (Fe³⁺) Color Centers",
+        trace: "Ferric Iron Color Centers",
         crystal: "Trigonal / Hexagonal",
         hardness: "9.0 Mohs Scale",
-        desc: "Colored by ferric iron ions within the crystalline lattice. Known in planetary gemology as Pushparaga to support wisdom, prosperity, and mental clarity."
+        desc: "Known as Pushparaga in Sri Lanka. Associated with wisdom, financial expansion, and mental clarity."
       },
       star: {
-        title: "Star Sapphire",
-        subtitle: "Asterism Phenomenon • Rutile Silk",
+        title: "6-Ray Star Sapphire",
+        subtitle: "Asterism Phenomenon • Planetary Shield",
         img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop",
         formula: "Al₂O₃ + TiO₂ Inclusions",
-        trace: "Oriented Rutile Needles",
-        crystal: "Hexagonal Asterism",
+        trace: "Oriented Rutile Needles (Silk)",
+        crystal: "Hexagonal Cabochon",
         hardness: "9.0 Mohs Scale",
-        desc: "Contains oriented microscopic rutile needles that reflect light into a 6-rayed star across the polished cabochon surface. Revered for aura grounding."
+        desc: "Contains microscopic rutile inclusions that reflect a floating six-rayed star across the cabochon surface."
+      },
+      green: {
+        title: "Green Sapphire",
+        subtitle: "Corundum Variety • Mercury (Budha)",
+        img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃:Fe²⁺:Fe³⁺",
+        trace: "Mixed Valence Iron Ions",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "Ranging from mint to deep olive green. Fosters intellectual composure and clear decision-making."
+      },
+      catseye: {
+        title: "Chrysoberyl Cat's Eye",
+        subtitle: "Chatoyant Phenomenon • Ketu Protection",
+        img: "https://images.unsplash.com/photo-1611591475165-f481c7f465c4?q=80&w=600&auto=format&fit=crop",
+        formula: "BeAl₂O₄",
+        trace: "Micro-Tube Cavities",
+        crystal: "Orthorhombic System",
+        hardness: "8.5 Mohs Scale",
+        desc: "Displays a sharp central line of light across its surface. Highly regarded for neutralizing negative planetary transits."
+      },
+      alexandrite: {
+        title: "Chrysoberyl Alexandrite",
+        subtitle: "Phenomenal Stone • Color Change",
+        img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
+        formula: "BeAl₂O₄:Cr³⁺",
+        trace: "Chromium Color Change Centers",
+        crystal: "Orthorhombic",
+        hardness: "8.5 Mohs Scale",
+        desc: "Shifts from emerald green in daylight to raspberry red under warm incandescent light. Ultra-rare collector gem."
+      },
+      redspinel: {
+        title: "Flame Red Spinel",
+        subtitle: "Spinel Group • Natural Unheated Red",
+        img: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop",
+        formula: "MgAl₂O₄:Cr³⁺",
+        trace: "Chromium Trace",
+        crystal: "Cubic / Octahedral",
+        hardness: "8.0 Mohs Scale",
+        desc: "Historically mistaken for rubies in crown jewels. Spinels require no heat treatment to exhibit vivid saturation."
+      },
+      cobalt: {
+        title: "Cobalt Blue Spinel",
+        subtitle: "Spinel Group • Electric Cobalt Blue",
+        img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop",
+        formula: "MgAl₂O₄:Co²⁺",
+        trace: "Cobalt (Co²⁺) Trace",
+        crystal: "Cubic System",
+        hardness: "8.0 Mohs Scale",
+        desc: "One of the rarest spinels in existence, colored by trace cobalt that imparts an electric neon blue sheen."
+      },
+      emerald: {
+        title: "Natural Emerald",
+        subtitle: "Beryl Family • Mercury (Budha) Resonance",
+        img: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop",
+        formula: "Be₃Al₂(SiO₃)₆:Cr/V",
+        trace: "Chromium & Vanadium",
+        crystal: "Hexagonal Prism",
+        hardness: "7.5 - 8.0 Mohs Scale",
+        desc: "The quintessential green gemstone. Known for natural interior inclusions ('jardin') that certify its natural origin."
+      },
+      purple: {
+        title: "Purple Sapphire",
+        subtitle: "Corundum Variety • Royal Violet",
+        img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃ (Fe, Ti, Cr)",
+        trace: "Vanadium & Chromium Blend",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "Combines the calming properties of blue sapphire with the fiery passion of ruby. Promotes crown chakra alignment."
+      },
+      orange: {
+        title: "Orange Sapphire",
+        subtitle: "Corundum Variety • Sunset Orange",
+        img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃:Fe³⁺, Cr³⁺",
+        trace: "Ferric Iron & Chromium",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "A bold, energetic gemstone representing creative expression and warmth."
+      },
+      hessonite: {
+        title: "Hessonite Garnet",
+        subtitle: "Grossular Garnet • Rahu Alignment",
+        img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop",
+        formula: "Ca₃Al₂(SiO₄)₃",
+        trace: "Manganese & Iron (Honey Color)",
+        crystal: "Dodecahedral Cubic",
+        hardness: "7.25 Mohs Scale",
+        desc: "Known as Gomedha. Exhibits a characteristic 'whisps of smoke' internal swirl effect under magnification."
+      },
+      tsavorite: {
+        title: "Tsavorite Garnet",
+        subtitle: "Grossular Variety • Electric Chrome Green",
+        img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+        formula: "Ca₃Al₂(SiO₄)₃:V³⁺/Cr³⁺",
+        trace: "Vanadium & Chromium",
+        crystal: "Cubic System",
+        hardness: "7.5 Mohs Scale",
+        desc: "Possesses a higher refractive index than emerald, offering stunning brilliance without heat treatment."
+      },
+      aquamarine: {
+        title: "Natural Aquamarine",
+        subtitle: "Beryl Family • Ocean Tranquility",
+        img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop",
+        formula: "Be₃Al₂Si₆O₁₈:Fe²⁺",
+        trace: "Ferrous Iron (Fe²⁺)",
+        crystal: "Hexagonal Prism",
+        hardness: "7.5 - 8.0 Mohs Scale",
+        desc: "Radiates serene sea-blue tones. Favored for emotional balance, clarity of communication, and stress relief."
+      },
+      zircon: {
+        title: "Ceylon White Zircon",
+        subtitle: "Natural Nesosilicate • High Refraction",
+        img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop",
+        formula: "ZrSiO₄",
+        trace: "Uranium/Thorium Trace (Low)",
+        crystal: "Tetragonal System",
+        hardness: "7.5 Mohs Scale",
+        desc: "Exhibits incredible double refraction (birefringence) and dispersion fire second only to diamond."
       }
     };
 
@@ -845,7 +962,7 @@
       const cards = document.querySelectorAll('.gem-card');
       cards.forEach(card => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.style.display = 'block';
+          card.style.display = 'flex';
         } else {
           card.style.display = 'none';
         }
