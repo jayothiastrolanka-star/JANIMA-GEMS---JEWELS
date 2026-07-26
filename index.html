@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Janima Gems & Jewels | High Jewelry & Neuro-Astrology Certification</title>
+  <title>JANIMA | Fine Gemology & High Jewelry</title>
   
-  <!-- Premium Google Fonts -->
+  <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary-gold: #C5A059;
-      --gold-hover: #B08C45;
-      --soft-cream: #FAF8F5;
-      --card-cream: #F4F0EA;
-      --dark-text: #1A1A1A;
-      --muted-text: #666666;
+      --gold-primary: #D4AF37;
+      --gold-light: #F3E5AB;
+      --gold-dark: #AA7C11;
+      --bg-dark: #0A0A0C;
+      --bg-card: rgba(20, 20, 25, 0.7);
+      --border-gold: rgba(212, 175, 55, 0.3);
+      --text-main: #EAEAEA;
+      --text-muted: #999999;
       --pure-white: #FFFFFF;
-      --border-color: #E6E0D4;
     }
 
     * {
@@ -29,518 +30,632 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--soft-cream);
-      color: var(--dark-text);
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
     }
 
-    /* Top Navigation Bar */
-    .navbar {
+    /* Glass Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 25px;
-      background-color: rgba(250, 248, 245, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border-color);
-      backdrop-filter: blur(5px);
+      padding: 20px 8%;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border-gold);
     }
 
-    .nav-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--dark-text);
+    .brand-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: var(--gold-primary);
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
     }
 
-    .nav-badge {
+    .nav-tag {
       font-size: 10px;
-      letter-spacing: 1.5px;
-      color: var(--primary-gold);
-      border: 1px solid var(--primary-gold);
-      padding: 4px 10px;
-      border-radius: 20px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      font-weight: 600;
+      color: var(--gold-light);
+      border: 1px solid var(--border-gold);
+      padding: 6px 16px;
+      border-radius: 30px;
+      background: rgba(212, 175, 55, 0.05);
     }
 
-    /* Hero Section - Luxury Title Layout */
+    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 50px 20px 30px 20px;
+      padding: 80px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .hero-sub {
+    .hero-subtitle {
       font-size: 11px;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
       text-transform: uppercase;
-      color: var(--primary-gold);
-      font-weight: 600;
+      color: var(--gold-primary);
       margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 38px;
+      font-family: 'Cinzel', serif;
+      font-size: 42px;
+      font-weight: 700;
       line-height: 1.2;
-      font-weight: 400;
-      font-style: italic;
-      margin-bottom: 15px;
-      color: var(--dark-text);
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 50%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .hero-desc {
-      font-size: 13px;
-      color: var(--muted-text);
-      max-width: 320px;
-      margin: 0 auto;
+    .hero-description {
+      font-size: 14px;
+      color: var(--text-muted);
       font-weight: 300;
+      max-width: 650px;
+      margin: 0 auto 30px;
     }
 
-    /* Main Hero Gemstone Photo Card */
-    .main-image-container {
-      padding: 0 20px;
-      margin-top: 25px;
-      margin-bottom: 50px;
-    }
-
-    .main-image-card {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-      border: 1px solid var(--border-color);
-    }
-
-    .main-image-card img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .image-overlay-text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 25px 20px;
-      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
-      color: var(--pure-white);
-    }
-
-    .overlay-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .overlay-sub {
-      font-size: 12px;
-      opacity: 0.8;
-      font-weight: 300;
-    }
-
-    /* Quick Stats Bar */
-    .stats-section {
+    /* Interactive Category Filter */
+    .filter-container {
       display: flex;
-      justify-content: space-around;
-      padding: 30px 20px;
-      background-color: var(--card-cream);
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-      margin-bottom: 50px;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      padding: 0 20px;
     }
 
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 600;
-      color: var(--primary-gold);
-    }
-
-    .stat-label {
-      font-size: 10px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted-text);
-    }
-
-    /* Fine Jewelry & Gemstones Grid */
-    .collection-section {
-      padding: 0 20px 60px 20px;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-style: italic;
-    }
-
-    .section-subtitle {
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-gold);
+      color: var(--text-muted);
+      padding: 8px 20px;
+      border-radius: 20px;
       font-size: 11px;
-      color: var(--primary-gold);
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--gold-primary);
+      color: var(--bg-dark);
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
       font-weight: 600;
     }
 
-    .grid-container {
+    /* Gemstone Vault Grid */
+    .vault-section {
+      padding: 0 8% 80px;
+    }
+
+    .gem-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
     }
 
-    .grid-card {
-      background: var(--pure-white);
-      border-radius: 18px;
+    .gem-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
       overflow: hidden;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
     }
 
-    .grid-card img {
+    .gem-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.8), 0 0 20px rgba(212, 175, 55, 0.2);
+    }
+
+    .gem-image-wrapper {
+      position: relative;
       width: 100%;
       height: 260px;
+      overflow: hidden;
+    }
+
+    .gem-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gem-card:hover .gem-image-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .gem-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(10, 10, 12, 0.8);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+
+    .gem-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .gem-title {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      color: var(--pure-white);
+      margin-bottom: 6px;
+    }
+
+    .gem-origin {
+      font-size: 11px;
+      color: var(--gold-primary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .btn-inspect {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 0;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .gem-card:hover .btn-inspect {
+      background: var(--gold-primary);
+      color: var(--bg-dark);
+      font-weight: 600;
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 7, 0.9);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: #111115;
+      border: 1px solid var(--gold-primary);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 500px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 0 50px rgba(212, 175, 55, 0.25);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      z-index: 10;
+    }
+
+    .modal-header-img {
+      width: 100%;
+      height: 240px;
       object-fit: cover;
     }
 
-    .grid-content {
-      padding: 22px;
+    .modal-content {
+      padding: 25px;
     }
 
-    .grid-tag {
-      display: inline-block;
-      font-size: 10px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--primary-gold);
-      font-weight: 600;
-      margin-bottom: 6px;
+    .modal-title {
+      font-family: 'Cinzel', serif;
+      font-size: 24px;
+      color: var(--gold-primary);
+      margin-bottom: 5px;
     }
 
-    .grid-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--dark-text);
-    }
-
-    .grid-desc {
-      font-size: 12.5px;
-      color: var(--muted-text);
-      line-height: 1.6;
-      border-top: 1px solid var(--border-color);
-      padding-top: 12px;
-    }
-
-    /* Neuro-Astrology Science Section (Placed near the bottom) */
-    .science-section {
-      padding: 0 20px 50px 20px;
-    }
-
-    .science-card {
-      background: var(--pure-white);
-      border-radius: 20px;
-      padding: 28px 22px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    }
-
-    .science-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--dark-text);
-      margin-bottom: 6px;
-      text-align: center;
-    }
-
-    .science-subtitle {
+    .modal-subtitle {
       font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--primary-gold);
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 22px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
     }
 
-    .science-text {
-      font-size: 13px;
-      color: var(--muted-text);
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .spec-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .spec-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold-primary);
+      margin-bottom: 4px;
+    }
+
+    .spec-value {
+      font-size: 12px;
+      color: var(--pure-white);
+      font-weight: 500;
+    }
+
+    .modal-description {
+      font-size: 12px;
+      color: var(--text-muted);
       line-height: 1.7;
-      margin-bottom: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 2px solid var(--gold-primary);
     }
 
-    .science-text b {
-      color: var(--dark-text);
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 999;
+      transition: transform 0.3s ease;
     }
 
-    /* Contact Section */
-    .contact-section {
-      padding: 40px 20px;
-      background-color: var(--card-cream);
-      border-top: 1px solid var(--border-color);
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
       text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid var(--border-gold);
+      background: rgba(5, 5, 7, 0.95);
     }
 
-    .contact-card {
-      background: var(--pure-white);
-      border-radius: 18px;
-      padding: 30px 20px;
-      border: 1px solid var(--border-color);
-      max-width: 400px;
-      margin: 0 auto;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.02);
-    }
-
-    .contact-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
+    .footer-title {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      color: var(--gold-primary);
       margin-bottom: 8px;
     }
 
-    .contact-sub {
-      font-size: 12px;
-      color: var(--muted-text);
-      margin-bottom: 20px;
-    }
-
-    .phone-number {
-      font-size: 18px;
-      font-weight: 600;
+    .footer-text {
+      font-size: 11px;
+      color: var(--text-muted);
       letter-spacing: 1px;
-      color: var(--dark-text);
-      margin-bottom: 20px;
-    }
-
-    .btn-action {
-      display: block;
-      background-color: var(--primary-gold);
-      color: var(--pure-white);
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 30px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-      transition: background 0.3s ease;
-      margin-bottom: 10px;
-    }
-
-    .btn-whatsapp {
-      background-color: #25D366;
-    }
-
-    /* Footer Section */
-    .footer {
-      background-color: #111111;
-      color: var(--pure-white);
-      text-align: center;
-      padding: 50px 20px 30px 20px;
-    }
-
-    .footer-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      letter-spacing: 3px;
-      color: var(--primary-gold);
-      margin-bottom: 10px;
-    }
-
-    .footer-sub {
-      font-size: 11px;
-      color: #888888;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
-
-    .footer-badge {
-      display: inline-block;
-      background: rgba(197, 160, 89, 0.15);
-      border: 1px solid var(--primary-gold);
-      color: var(--primary-gold);
-      font-size: 11px;
-      padding: 8px 18px;
-      border-radius: 30px;
-      margin-bottom: 30px;
-    }
-
-    .footer-copy {
-      font-size: 10px;
-      color: #555555;
-      border-top: 1px solid #222222;
-      padding-top: 20px;
     }
   </style>
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-brand">JANIMA</div>
-    <div class="nav-badge">KCA GROUP</div>
+  <nav class="nav">
+    <div class="brand-logo">JANIMA</div>
+    <div class="nav-tag">KCA GROUP CERTIFIED</div>
   </nav>
 
-  <!-- 1. Hero Section (Ultra-Luxury Opener) -->
+  <!-- Hero Banner -->
   <header class="hero">
-    <div class="hero-sub">Aura & Chakra Energy Certified</div>
-    <h1 class="hero-title">Light, Rendered Eternal.</h1>
-    <p class="hero-desc">Discover precision-crafted Sri Lankan and global gemstones imbued with natural cosmic frequency alignment.</p>
+    <div class="hero-subtitle">High-Jewelry & Gemological Verification</div>
+    <h1 class="hero-title">Untamed Light. Absolute Perfection.</h1>
+    <p class="hero-description">Discover unheated Sri Lankan sapphires and rare global mineral specimens authenticated with spectroscopic clarity and cosmic resonance alignment.</p>
   </header>
 
-  <!-- 2. Main Hero Gemstone Photo Card (Open වෙන තැනම ඇති ලස්සන Photo එක) -->
-  <div class="main-image-container">
-    <div class="main-image-card">
-      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" alt="Natural Ceylon Sapphire Ring">
-      <div class="image-overlay-text">
-        <div class="overlay-title">Royal Ceylon Sapphire</div>
-        <div class="overlay-sub">100% Natural Metaphysical Grade Gemstone</div>
+  <!-- Filter Buttons -->
+  <div class="filter-container">
+    <button class="filter-btn active" onclick="filterGems('all')">All Vault Specimens</button>
+    <button class="filter-btn" onclick="filterGems('sapphire')">Sapphires</button>
+    <button class="filter-btn" onclick="filterGems('ruby')">Rubies</button>
+    <button class="filter-btn" onclick="filterGems('rare')">Collector Rare</button>
+  </div>
+
+  <!-- Gemstone Grid -->
+  <section class="vault-section">
+    <div class="gem-grid" id="gemGrid">
+
+      <!-- Card 1: Royal Blue Sapphire -->
+      <div class="gem-card" data-category="sapphire" onclick="openModal('blue')">
+        <div class="gem-image-wrapper">
+          <span class="gem-badge">Unheated</span>
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=800&auto=format&fit=crop" alt="Royal Blue Sapphire">
+        </div>
+        <div class="gem-info">
+          <div class="gem-title">Royal Blue Sapphire</div>
+          <div class="gem-origin">Ceylon • Ratnapura</div>
+          <div class="btn-inspect">Inspect Analysis</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Padparadscha -->
+      <div class="gem-card" data-category="rare" onclick="openModal('padparadscha')">
+        <div class="gem-image-wrapper">
+          <span class="gem-badge">Ultra Rare</span>
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=800&auto=format&fit=crop" alt="Padparadscha Sapphire">
+        </div>
+        <div class="gem-info">
+          <div class="gem-title">Padparadscha Sapphire</div>
+          <div class="gem-origin">Ceylon • Elahera</div>
+          <div class="btn-inspect">Inspect Analysis</div>
+        </div>
+      </div>
+
+      <!-- Card 3: Pigeon Blood Ruby -->
+      <div class="gem-card" data-category="ruby" onclick="openModal('ruby')">
+        <div class="gem-image-wrapper">
+          <span class="gem-badge">Natural</span>
+          <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=800&auto=format&fit=crop" alt="Pigeon Blood Ruby">
+        </div>
+        <div class="gem-info">
+          <div class="gem-title">Pigeon Blood Ruby</div>
+          <div class="gem-origin">Natural Corundum</div>
+          <div class="btn-inspect">Inspect Analysis</div>
+        </div>
+      </div>
+
+      <!-- Card 4: Canary Yellow Sapphire -->
+      <div class="gem-card" data-category="sapphire" onclick="openModal('yellow')">
+        <div class="gem-image-wrapper">
+          <span class="gem-badge">Vedic Grade</span>
+          <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=800&auto=format&fit=crop" alt="Canary Yellow Sapphire">
+        </div>
+        <div class="gem-info">
+          <div class="gem-title">Canary Yellow Sapphire</div>
+          <div class="gem-origin">Ceylon • Balangoda</div>
+          <div class="btn-inspect">Inspect Analysis</div>
+        </div>
+      </div>
+
+      <!-- Card 5: Peacock Teal Sapphire -->
+      <div class="gem-card" data-category="sapphire" onclick="openModal('teal')">
+        <div class="gem-image-wrapper">
+          <span class="gem-badge">Bi-Color</span>
+          <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=800&auto=format&fit=crop" alt="Peacock Teal Sapphire">
+        </div>
+        <div class="gem-info">
+          <div class="gem-title">Peacock Teal Sapphire</div>
+          <div class="gem-origin">Natural Ceylon</div>
+          <div class="btn-inspect">Inspect Analysis</div>
+        </div>
+      </div>
+
+      <!-- Card 6: Star Sapphire -->
+      <div class="gem-card" data-category="rare" onclick="openModal('star')">
+        <div class="gem-image-wrapper">
+          <span class="gem-badge">Asterism</span>
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800&auto=format&fit=crop" alt="Star Sapphire">
+        </div>
+        <div class="gem-info">
+          <div class="gem-title">6-Ray Star Sapphire</div>
+          <div class="gem-origin">Natural Rutile Silk</div>
+          <div class="btn-inspect">Inspect Analysis</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating Contact CTA -->
+  <a href="https://wa.me/94740198375" class="whatsapp-float" target="_blank">
+    <span>Direct Vault Inquiry</span>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-title">JANIMA GEMS & JEWELS</div>
+    <div class="footer-text">© 2026 KCA GROUP. ALL RIGHTS RESERVED.</div>
+  </footer>
+
+  <!-- Modal Pop-Up -->
+  <div class="modal-overlay" id="gemModal" onclick="closeModal(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+      <img id="modalImg" class="modal-header-img" src="" alt="">
+      <div class="modal-content">
+        <div class="modal-title" id="modalTitle">Gemstone Title</div>
+        <div class="modal-subtitle" id="modalSub">Subheading</div>
+
+        <div class="spec-grid">
+          <div class="spec-item">
+            <div class="spec-label">Chemical Formula</div>
+            <div class="spec-value" id="modalFormula">Al₂O₃</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Mohs Hardness</div>
+            <div class="spec-value" id="modalHardness">9.0</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Trace Elements</div>
+            <div class="spec-value" id="modalTrace">Fe²⁺, Ti⁴⁺</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Crystal System</div>
+            <div class="spec-value" id="modalCrystal">Trigonal</div>
+          </div>
+        </div>
+
+        <div class="modal-description" id="modalDesc">
+          Detailed breakdown text goes here.
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- 3. Quick Stats Section -->
-  <section class="stats-section">
-    <div class="stat-item">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">Natural Gem</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Aura</div>
-      <div class="stat-label">Certified</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Ceylon</div>
-      <div class="stat-label">Origin</div>
-    </div>
-  </section>
+  <!-- JavaScript Logic -->
+  <script>
+    const gemData = {
+      blue: {
+        title: "Royal Blue Sapphire",
+        sub: "Natural Corundum • Saturn Alignment",
+        img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=800&auto=format&fit=crop",
+        formula: "Al₂O₃",
+        hardness: "9.0 Mohs Scale",
+        trace: "Iron & Titanium (Fe²⁺ + Ti⁴⁺)",
+        crystal: "Trigonal / Hexagonal",
+        desc: "Coloration arises from intervalence charge transfer between iron and titanium ions. Highly prized in planetary gemstone therapy for strengthening concentration, discipline, and neural alignment."
+      },
+      padparadscha: {
+        title: "Padparadscha Sapphire",
+        sub: "Lotus Spectrum • Extremely Rare",
+        img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=800&auto=format&fit=crop",
+        formula: "Al₂O₃:Cr³⁺:Fe³⁺",
+        hardness: "9.0 Mohs Scale",
+        trace: "Chromium & Ferric Iron",
+        crystal: "Trigonal System",
+        desc: "Exhibits a delicate balance of sunset orange and lotus pink. One of the world's rarest colored gemstones, symbolizing emotional purity and spiritual harmony."
+      },
+      ruby: {
+        title: "Pigeon Blood Ruby",
+        sub: "Natural Corundum • Sun Alignment",
+        img: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=800&auto=format&fit=crop",
+        formula: "Al₂O₃:Cr³⁺",
+        hardness: "9.0 Mohs Scale",
+        trace: "Chromium (Cr³⁺)",
+        crystal: "Hexagonal Prismatic",
+        desc: "Chromium ions replace aluminum in the crystal structure, producing an intense crimson hue with strong UV fluorescence that stimulates physical vitality and aura strength."
+      },
+      yellow: {
+        title: "Canary Yellow Sapphire",
+        sub: "Natural Corundum • Jupiter Alignment",
+        img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=800&auto=format&fit=crop",
+        formula: "Al₂O₃:Fe³⁺",
+        hardness: "9.0 Mohs Scale",
+        trace: "Ferric Iron Color Centers",
+        crystal: "Trigonal Habit",
+        desc: "Known as Pushparaga in traditional gemology. Channels expansive energy associated with wisdom, financial expansion, and intellectual clarity."
+      },
+      teal: {
+        title: "Peacock Teal Sapphire",
+        sub: "Bi-Color Spectrum • Multi-Element",
+        img: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=800&auto=format&fit=crop",
+        formula: "Al₂O₃ (Fe / Ti Rich)",
+        hardness: "9.0 Mohs Scale",
+        trace: "High Iron Concentration",
+        crystal: "Trigonal System",
+        desc: "Features naturally interwoven ocean green and deep sapphire blue zones caused by localized fluctuations in iron density during crystalline formation."
+      },
+      star: {
+        title: "6-Ray Star Sapphire",
+        sub: "Asterism Optical Phenomenon",
+        img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800&auto=format&fit=crop",
+        formula: "Al₂O₃ + TiO₂ Inclusions",
+        hardness: "9.0 Mohs Scale",
+        trace: "Oriented Rutile Needles",
+        crystal: "Hexagonal Asterism",
+        desc: "Microscopic needle-like inclusions of Rutile (TiO₂) aligned along hexagonal axes reflect light to produce a sharp 6-rayed star across the polished cabochon dome."
+      }
+    };
 
-  <!-- 4. High Jewelry Collection (Emeralds, Rubies & Sapphire Rings Grid) -->
-  <section class="collection-section">
-    <div class="section-header">
-      <div class="section-subtitle">Exquisite Fine Jewelry</div>
-      <h2 class="section-title">The Master Collection</h2>
-    </div>
+    function filterGems(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
 
-    <div class="grid-container">
-      
-      <!-- Blue Sapphire Ring -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop" alt="Blue Sapphire Ring Design">
-        <div class="grid-content">
-          <div class="grid-tag">Saturn • Throat & Third Eye Chakra</div>
-          <div class="grid-title">Royal Ceylon Sapphire Ring</div>
-          <div class="grid-desc">Ethically sourced Natural Sapphire set in solid gold. Balances mental focus and fortifies the human aura field.</div>
-        </div>
-      </div>
+      const cards = document.querySelectorAll('.gem-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
 
-      <!-- Natural Emerald Ring/Jewelry -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1000&auto=format&fit=crop" alt="Natural Emerald Gemstone">
-        <div class="grid-content">
-          <div class="grid-tag">Mercury • Heart Chakra (Anahata)</div>
-          <div class="grid-title">Colombian Emerald Solitaire</div>
-          <div class="grid-desc">Vibrant green hue enhancing intellectual sharpness, verbal articulation, and heart-center energy vitality.</div>
-        </div>
-      </div>
+    function openModal(key) {
+      const data = gemData[key];
+      if (!data) return;
 
-      <!-- Pigeon Blood Ruby Ring -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop" alt="Natural Ruby Ring">
-        <div class="grid-content">
-          <div class="grid-tag">Sun • Root & Solar Chakra</div>
-          <div class="grid-title">Pigeon Blood Ruby Ring</div>
-          <div class="grid-desc">Radiates solar warmth, awakening leadership aura, core stamina, and instinctual courage.</div>
-        </div>
-      </div>
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalSub').innerText = data.sub;
+      document.getElementById('modalImg').src = data.img;
+      document.getElementById('modalFormula').innerText = data.formula;
+      document.getElementById('modalHardness').innerText = data.hardness;
+      document.getElementById('modalTrace').innerText = data.trace;
+      document.getElementById('modalCrystal').innerText = data.crystal;
+      document.getElementById('modalDesc').innerText = data.desc;
 
-      <!-- Yellow Sapphire / Pendant -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop" alt="Yellow Sapphire Fine Jewelry">
-        <div class="grid-content">
-          <div class="grid-tag">Jupiter • Solar Plexus Chakra</div>
-          <div class="grid-title">Golden Ceylon Yellow Sapphire</div>
-          <div class="grid-desc">Imbued with Jovian frequencies, promoting wealth accumulation, wisdom, and cognitive harmony.</div>
-        </div>
-      </div>
+      document.getElementById('gemModal').classList.add('active');
+    }
 
-      <!-- Organic Red Coral / Jewelry -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=1000&auto=format&fit=crop" alt="Red Coral Jewelry">
-        <div class="grid-content">
-          <div class="grid-tag">Mars • Sacral Chakra</div>
-          <div class="grid-title">Organic Red Coral Cushion</div>
-          <div class="grid-desc">Protects physical vitality, balances blood circulation aura, and removes energy blockages.</div>
-        </div>
-      </div>
+    function closeModal(e) {
+      if (e.target.id === 'gemModal') {
+        closeModalDirect();
+      }
+    }
 
-    </div>
-  </section>
-
-  <!-- 5. Neuro-Astrology Science Section (අන්තිම කොටසේ ඇති විද්‍යාත්මක විස්තරය) -->
-  <section class="science-section">
-    <div class="science-card">
-      <div class="science-subtitle">Scientific & Cosmic Synergy</div>
-      <h2 class="science-title">Planets, Neurons & Cosmic Radiation</h2>
-      
-      <div class="science-text">
-        <b>1. Planetary Electromagnetic Frequencies:</b> Celestial bodies emit distinct electromagnetic wave frequencies. In Vedic Astrology, each planet governs subtle biological energy currents (Nadis) throughout the human body.
-      </div>
-
-      <div class="science-text">
-        <b>2. Neuronal Signal Modulation:</b> The human central nervous system contains over 86 billion <b>Neurons</b> communicating via electrochemical impulses. Planetary energy shifts directly influence neurotransmitter release, mental stability, and emotional clarity.
-      </div>
-
-      <div class="science-text">
-        <b>3. Natural Crystalline Prism Effect:</b> Gemstones like Corundum act as natural optical prisms. When worn in direct contact with skin, certified natural gemstones filter cosmic light waves, transmitting harmonious energy frequencies directly through neural pathways to balance body, aura, and mind.
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. Direct Contact Section -->
-  <section class="contact-section">
-    <div class="contact-card">
-      <div class="contact-title">Inquire & Verification</div>
-      <div class="contact-sub">Directly connect with Janima Gems & Jewels</div>
-      
-      <div class="phone-number">+94 74 019 8375</div>
-
-      <a href="https://wa.me/94740198375" class="btn-action btn-whatsapp">Connect via WhatsApp</a>
-      <a href="tel:+94740198375" class="btn-action">Direct Call</a>
-    </div>
-  </section>
-
-  <!-- 7. Footer Section -->
-  <footer class="footer">
-    <div class="footer-brand">JANIMA</div>
-    <div class="footer-sub">GEMS & JEWELS • KCA GROUP</div>
-    
-    <div class="footer-badge">
-      🔒 Authenticated via Janima QR System
-    </div>
-
-    <div class="footer-copy">
-      © 2026 JANIMA GEMS & JEWELS. All Rights Reserved.
-    </div>
-  </footer>
-
+    function closeModalDirect() {
+      document.getElementById('gemModal').classList.remove('active');
+    }
+  </script>
 </body>
 </html>
