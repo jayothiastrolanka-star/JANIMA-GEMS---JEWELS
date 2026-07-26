@@ -8,7 +8,7 @@
   <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,600;0,700;1,400;1,600&family=Poppins:wght=300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -74,7 +74,7 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 30px 20px 10px;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -102,8 +102,58 @@
       font-size: 13px;
       color: var(--muted-text);
       max-width: 580px;
-      margin: 0 auto;
+      margin: 0 auto 20px;
       font-weight: 300;
+    }
+
+    /* Top Featured Showcase Banner Image */
+    .top-banner-container {
+      max-width: 900px;
+      margin: 0 auto 30px;
+      padding: 0 20px;
+    }
+
+    .top-banner-card {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      border: 1px solid var(--border-color);
+    }
+
+    .top-banner-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .top-banner-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 25px;
+      color: #FFFFFF;
+    }
+
+    .top-banner-tag {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--primary-gold);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .top-banner-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
     }
 
     /* Category Filter Section */
@@ -112,7 +162,7 @@
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
-      padding: 20px 20px 25px;
+      padding: 10px 20px 25px;
     }
 
     .filter-btn {
@@ -165,7 +215,7 @@
       gap: 18px;
     }
 
-    /* Clean Loose Gem Card Style (Matching Screenshot) */
+    /* Clean Loose Gem Card Style */
     .gem-card {
       position: relative;
       background: #EFECE6;
@@ -199,11 +249,11 @@
       transform: scale(1.05);
     }
 
-    /* Floating Text Overlay over Gem (Screenshot Style) */
+    /* Floating Text Overlay over Gem */
     .gem-card-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(0, 0, 0, 0.2);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -214,7 +264,7 @@
     }
 
     .gem-card:hover .gem-card-overlay {
-      background: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.35);
     }
 
     .gem-card-title {
@@ -222,7 +272,7 @@
       color: #FFFFFF;
       font-size: 18px;
       font-weight: 600;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
       line-height: 1.2;
     }
 
@@ -233,6 +283,34 @@
       margin-top: 4px;
       text-transform: uppercase;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Floating Photo Upload Manager Button */
+    .upload-floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1A1A1A;
+      color: var(--primary-gold);
+      border: 1px solid var(--primary-gold);
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .upload-floating-btn:hover {
+      background: var(--primary-gold);
+      color: #FFFFFF;
+      transform: scale(1.05);
     }
 
     /* Contact Section */
@@ -300,12 +378,12 @@
       background-color: #1EBE5D;
     }
 
-    /* Modal Styles */
+    /* Modal Windows (Gem Details & Upload Panel) */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(4px);
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(5px);
       z-index: 1000;
       display: flex;
       justify-content: center;
@@ -328,7 +406,7 @@
       max-width: 440px;
       border: 1px solid var(--primary-gold);
       overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
       transform: translateY(20px);
       transition: transform 0.3s ease;
       max-height: 90vh;
@@ -426,6 +504,50 @@
       border: 1px solid var(--border-color);
     }
 
+    /* Admin Upload Form UI Styles */
+    .upload-form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .upload-form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--dark-text);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .upload-select, .upload-file-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+    }
+
+    .btn-submit-upload {
+      width: 100%;
+      background: var(--primary-gold);
+      color: #FFFFFF;
+      border: none;
+      padding: 12px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-submit-upload:hover {
+      background: var(--gold-hover);
+    }
+
     /* Footer */
     .footer {
       background-color: #111111;
@@ -483,7 +605,18 @@
     <p class="hero-desc">Explore 20 certified gemstone varieties precision-cut for maximum refractive brilliance and cosmic energy resonance.</p>
   </header>
 
-  <!-- Filter Category Bar -->
+  <!-- Top Featured Showcase Image Banner (Requested Jewelry Photo Placement) -->
+  <div class="top-banner-container">
+    <div class="top-banner-card">
+      <img id="topHeroBanner" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" alt="Janima Fine High Jewelry">
+      <div class="top-banner-overlay">
+        <div class="top-banner-tag">Masterpiece Collection</div>
+        <div class="top-banner-title">Precision Cut Natural Gemstones</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Filter Section -->
   <div class="filter-section">
     <button class="filter-btn active" onclick="filterGems('all')">All 20 Varieties</button>
     <button class="filter-btn" onclick="filterGems('sapphire')">Sapphires</button>
@@ -500,189 +633,193 @@
 
     <div class="gem-grid" id="gemGrid">
 
-      <!-- 1. Green Emerald Ring (Uploded Image_0) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('emerald_ring')">
-        <img src="images/image_0.png" alt="Emerald Ring">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Emerald Ring</div>
-          <div class="gem-card-sub">Halo Setting</div>
-        </div>
-      </div>
-
-      <!-- 2. Ruby Ring (Uploaded Image_1) -->
-      <div class="gem-card" data-category="ruby-spinel" onclick="openGemModal('ruby_ring')">
-        <img src="images/image_1.png" alt="Ruby Ring">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Ruby Ring</div>
-          <div class="gem-card-sub">Side baguettes</div>
-        </div>
-      </div>
-
-      <!-- 3. Pink Sapphire Ring (Uploaded Image_2) -->
-      <div class="gem-card" data-category="sapphire" onclick="openGemModal('pink_sapphire')">
-        <img src="images/image_2.png" alt="Pink Sapphire Ring">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Pink Sapphire</div>
-          <div class="gem-card-sub">Rose Gold</div>
-        </div>
-      </div>
-
-      <!-- 4. Diamond Pendant (Uploaded Image_3) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('diamond_pendant')">
-        <img src="images/image_3.png" alt="Diamond Pendant">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Diamond</div>
-          <div class="gem-card-sub">Halo Pendant</div>
-        </div>
-      </div>
-
-      <!-- 5. Blue Gem Earrings (Uploaded Image_4) -->
-      <div class="gem-card" data-category="sapphire" onclick="openGemModal('blue_earrings')">
-        <img src="images/image_4.png" alt="Blue Earrings">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Blue Gem</div>
-          <div class="gem-card-sub">Teardrop Earrings</div>
-        </div>
-      </div>
-
-      <!-- 6. Gold Necklaces (Uploaded Image_5) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('gold_necklaces')">
-        <img src="images/image_5.png" alt="Gold Necklaces">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Gold Chains</div>
-          <div class="gem-card-sub">Blue & Moon Pendants</div>
-        </div>
-      </div>
-
-      <!-- 7. Peach Morganite Ring (Uploaded Image_6) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('morganite_ring')">
-        <img src="images/image_6.png" alt="Morganite Ring">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Morganite</div>
-          <div class="gem-card-sub">Rose Gold Infinity</div>
-        </div>
-      </div>
-
-      <!-- 8. Yellow Citrine Ring (Uploaded Image_7) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('citrine_ring')">
-        <img src="images/image_7.png" alt="Citrine Ring">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Citrine Ring</div>
-          <div class="gem-card-sub">Emerald Cut</div>
-        </div>
-      </div>
-
-      <!-- 9. Alexandrite Ring (Uploaded Image_8) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('alexandrite_ring')">
-        <img src="images/image_8.png" alt="Alexandrite Ring">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Alexandrite</div>
-          <div class="gem-card-sub">Color Change</div>
-        </div>
-      </div>
-
-      <!-- Original placeholders 10-20 (updated with generic colors) -->
-      <!-- 10. Blue Sapphire (Placeholder) -->
-      <div class="gem-card" data-category="sapphire" onclick="openGemModal('blue_loose')">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop" alt="Blue Sapphires">
+      <!-- 1. Blue Sapphires -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('blue')">
+        <img id="img_blue" src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop" alt="Blue Sapphires">
         <div class="gem-card-overlay">
           <div class="gem-card-title">Blue Sapphires</div>
-          <div class="gem-card-sub">Loose Gems</div>
+          <div class="gem-card-sub">Saturn Energy</div>
         </div>
       </div>
 
-      <!-- 11. Padparadscha (Placeholder) -->
+      <!-- 2. Ruby -->
+      <div class="gem-card" data-category="ruby-spinel" onclick="openGemModal('ruby')">
+        <img id="img_ruby" src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop" alt="Ruby">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Ruby</div>
+          <div class="gem-card-sub">Sun Vitality</div>
+        </div>
+      </div>
+
+      <!-- 3. Padparadscha -->
       <div class="gem-card" data-category="rare" onclick="openGemModal('padparadscha')">
-        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Padparadscha">
+        <img id="img_padparadscha" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Padparadscha">
         <div class="gem-card-overlay">
           <div class="gem-card-title">Padparadscha</div>
           <div class="gem-card-sub">Lotus Pink-Orange</div>
         </div>
       </div>
 
-      <!-- 12. Teal Sapphires (Placeholder) -->
+      <!-- 4. Teal Sapphires -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('teal')">
-        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop" alt="Teal Sapphires">
+        <img id="img_teal" src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop" alt="Teal Sapphires">
         <div class="gem-card-overlay">
           <div class="gem-card-title">Teal Sapphires</div>
-          <div class="gem-card-sub">Ocean Spectrum</div>
+          <div class="gem-card-sub">Ocean Green-Blue</div>
         </div>
       </div>
 
-      <!-- 13. White Sapphires (Placeholder) -->
+      <!-- 5. White Sapphires -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('white')">
-        <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="White Sapphires">
+        <img id="img_white" src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="White Sapphires">
         <div class="gem-card-overlay">
           <div class="gem-card-title">White Sapphires</div>
           <div class="gem-card-sub">Venus Diamond Substitute</div>
         </div>
       </div>
 
-      <!-- 14. Yellow Sapphires (Placeholder) -->
-      <div class="gem-card" data-category="sapphire" onclick="openGemModal('yellow_loose')">
-        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Yellow Sapphires">
+      <!-- 6. Pink Sapphires -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('pink')">
+        <img id="img_pink" src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=600&auto=format&fit=crop" alt="Pink Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Pink Sapphires</div>
+          <div class="gem-card-sub">Vivid Heart Pink</div>
+        </div>
+      </div>
+
+      <!-- 7. Yellow Sapphires -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('yellow')">
+        <img id="img_yellow" src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Yellow Sapphires">
         <div class="gem-card-overlay">
           <div class="gem-card-title">Yellow Sapphires</div>
-          <div class="gem-card-sub">Jupiter Focus</div>
+          <div class="gem-card-sub">Jupiter Pushparaga</div>
         </div>
       </div>
 
-      <!-- 15. Red Spinel (Placeholder) -->
+      <!-- 8. Star Sapphires -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('star')">
+        <img id="img_star" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" alt="Star Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Star Sapphires</div>
+          <div class="gem-card-sub">6-Ray Asterism</div>
+        </div>
+      </div>
+
+      <!-- 9. Green Sapphires -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('green')">
+        <img id="img_green" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop" alt="Green Sapphires">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Green Sapphires</div>
+          <div class="gem-card-sub">Mercury Focus</div>
+        </div>
+      </div>
+
+      <!-- 10. Chrysoberyl Cat's Eye -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('catseye')">
+        <img id="img_catseye" src="https://images.unsplash.com/photo-1611591475165-f481c7f465c4?q=80&w=600&auto=format&fit=crop" alt="Chrysoberyl Cat's Eye">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Cat's Eye</div>
+          <div class="gem-card-sub">Ketu Shielding</div>
+        </div>
+      </div>
+
+      <!-- 11. Alexandrite -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('alexandrite')">
+        <img id="img_alexandrite" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Alexandrite">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Alexandrite</div>
+          <div class="gem-card-sub">Color Change Magic</div>
+        </div>
+      </div>
+
+      <!-- 12. Red Spinel -->
       <div class="gem-card" data-category="ruby-spinel" onclick="openGemModal('redspinel')">
-        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop" alt="Red Spinel">
+        <img id="img_redspinel" src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop" alt="Red Spinel">
         <div class="gem-card-overlay">
           <div class="gem-card-title">Red Spinel</div>
-          <div class="gem-card-sub">Flame Brilliance</div>
+          <div class="gem-card-sub">Flame Red Brilliance</div>
         </div>
       </div>
 
-      <!-- 16. Purple Sapphire (Placeholder) -->
+      <!-- 13. Cobalt Blue Spinel -->
+      <div class="gem-card" data-category="ruby-spinel" onclick="openGemModal('cobalt')">
+        <img id="img_cobalt" src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop" alt="Cobalt Blue Spinel">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Cobalt Spinel</div>
+          <div class="gem-card-sub">Electric Blue</div>
+        </div>
+      </div>
+
+      <!-- 14. Emerald -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('emerald')">
+        <img id="img_emerald" src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop" alt="Emerald">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Emerald</div>
+          <div class="gem-card-sub">Vivid Green Beryl</div>
+        </div>
+      </div>
+
+      <!-- 15. Purple Sapphire -->
       <div class="gem-card" data-category="sapphire" onclick="openGemModal('purple')">
-        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" alt="Purple Sapphire">
+        <img id="img_purple" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" alt="Purple Sapphire">
         <div class="gem-card-overlay">
           <div class="gem-card-title">Purple Sapphire</div>
           <div class="gem-card-sub">Royal Violet</div>
         </div>
       </div>
 
-      <!-- 17. Tsavorite Garnet (Placeholder) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('tsavorite')">
-        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop" alt="Tsavorite Garnet">
+      <!-- 16. Orange Sapphire -->
+      <div class="gem-card" data-category="sapphire" onclick="openGemModal('orange')">
+        <img id="img_orange" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Orange Sapphire">
         <div class="gem-card-overlay">
-          <div class="gem-card-title">Tsavorite</div>
+          <div class="gem-card-title">Orange Sapphire</div>
+          <div class="gem-card-sub">Sunset Orange</div>
+        </div>
+      </div>
+
+      <!-- 17. Hessonite Garnet -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('hessonite')">
+        <img id="img_hessonite" src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Hessonite Garnet">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Hessonite Garnet</div>
+          <div class="gem-card-sub">Gomedha / Rahu</div>
+        </div>
+      </div>
+
+      <!-- 18. Tsavorite Garnet -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('tsavorite')">
+        <img id="img_tsavorite" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop" alt="Tsavorite Garnet">
+        <div class="gem-card-overlay">
+          <div class="gem-card-title">Tsavorite Garnet</div>
           <div class="gem-card-sub">Chrome Green</div>
         </div>
       </div>
 
-      <!-- 18. Aquamarine (Placeholder) -->
+      <!-- 19. Aquamarine -->
       <div class="gem-card" data-category="rare" onclick="openGemModal('aquamarine')">
-        <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="Aquamarine">
+        <img id="img_aquamarine" src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="Aquamarine">
         <div class="gem-card-overlay">
           <div class="gem-card-title">Aquamarine</div>
           <div class="gem-card-sub">Sky Blue Beryl</div>
         </div>
       </div>
 
-      <!-- 19. Chrysoberyl Cat's Eye (Placeholder) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('catseye')">
-        <img src="https://images.unsplash.com/photo-1611591475165-f481c7f465c4?q=80&w=600&auto=format&fit=crop" alt="Cat's Eye">
+      <!-- 20. White Zircon -->
+      <div class="gem-card" data-category="rare" onclick="openGemModal('zircon')">
+        <img id="img_zircon" src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop" alt="White Zircon">
         <div class="gem-card-overlay">
-          <div class="gem-card-title">Cat's Eye</div>
-          <div class="gem-card-sub">Chatoyant Shield</div>
-        </div>
-      </div>
-
-      <!-- 20. Hessonite Garnet (Placeholder) -->
-      <div class="gem-card" data-category="rare" onclick="openGemModal('hessonite')">
-        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Hessonite">
-        <div class="gem-card-overlay">
-          <div class="gem-card-title">Hessonite</div>
-          <div class="gem-card-sub">Gomedha / Rahu</div>
+          <div class="gem-card-title">Ceylon White Zircon</div>
+          <div class="gem-card-sub">High Fire Refraction</div>
         </div>
       </div>
 
     </div>
   </section>
+
+  <!-- Floating Admin Upload Button -->
+  <button class="upload-floating-btn" onclick="openUploadModal()">
+    📷 Upload / Change Photos
+  </button>
 
   <!-- Contact Section -->
   <section class="contact-section">
@@ -725,136 +862,278 @@
 
         <table class="spec-table">
           <tr>
-            <td class="spec-label">Item Category</td>
-            <td class="spec-value" id="modalCategory">Jewelry Piece</td>
+            <td class="spec-label">Chemical Formula</td>
+            <td class="spec-value" id="modalFormula">Al₂O₃</td>
           </tr>
           <tr>
-            <td class="spec-label">Main Gem</td>
-            <td class="spec-value" id="modalMainGem">Natural Stone</td>
+            <td class="spec-label">Trace Elements</td>
+            <td class="spec-value" id="modalTrace">Chromophore Ions</td>
           </tr>
           <tr>
-            <td class="spec-label">Metal Type</td>
-            <td class="spec-value" id="modalMetal">Precious Metal</td>
+            <td class="spec-label">Crystal System</td>
+            <td class="spec-value" id="modalCrystal">Trigonal / Hexagonal</td>
           </tr>
           <tr>
-            <td class="spec-label">Authentication</td>
-            <td class="spec-value" id="modalAuth">Janima Certified</td>
+            <td class="spec-label">Mohs Hardness</td>
+            <td class="spec-value" id="modalHardness">9.0 Mohs Scale</td>
           </tr>
         </table>
 
         <div class="modal-desc" id="modalDesc">
-          Detailed piece description.
+          Detailed gemological description.
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Updated Data Logic with Uploaded Image Data -->
+  <!-- Modal Pop-up for Admin Photo Upload -->
+  <div class="modal-backdrop" id="uploadModal" onclick="closeUploadModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-body">
+        <button class="modal-close-btn" style="position: static; float: right;" onclick="closeUploadModalDirect()">&times;</button>
+        <h3 class="modal-title" style="margin-top:0;">Web Image Manager</h3>
+        <div class="modal-subtitle">Upload Custom Photos Directly</div>
+
+        <div class="upload-form-group">
+          <label>Select Item to Update:</label>
+          <select id="uploadTarget" class="upload-select">
+            <option value="top_banner">⭐ Top Hero Jewelry Banner</option>
+            <option value="blue">Blue Sapphire</option>
+            <option value="ruby">Ruby</option>
+            <option value="padparadscha">Padparadscha</option>
+            <option value="teal">Teal Sapphire</option>
+            <option value="white">White Sapphire</option>
+            <option value="pink">Pink Sapphire</option>
+            <option value="yellow">Yellow Sapphire</option>
+            <option value="star">Star Sapphire</option>
+            <option value="green">Green Sapphire</option>
+            <option value="catseye">Chrysoberyl Cat's Eye</option>
+            <option value="alexandrite">Alexandrite</option>
+            <option value="redspinel">Red Spinel</option>
+            <option value="cobalt">Cobalt Blue Spinel</option>
+            <option value="emerald">Emerald</option>
+            <option value="purple">Purple Sapphire</option>
+            <option value="orange">Orange Sapphire</option>
+            <option value="hessonite">Hessonite Garnet</option>
+            <option value="tsavorite">Tsavorite Garnet</option>
+            <option value="aquamarine">Aquamarine</option>
+            <option value="zircon">White Zircon</option>
+          </select>
+        </div>
+
+        <div class="upload-form-group">
+          <label>Select Photo from Device:</label>
+          <input type="file" id="imageInput" accept="image/*" class="upload-file-input">
+        </div>
+
+        <button class="btn-submit-upload" onclick="handleImageUpload()">Upload & Update Photo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Complete JavaScript Logic -->
   <script>
     const gemData = {
-      // Data for uploaded image pieces (0-8)
-      emerald_ring: {
-        title: "Emerald Halo Ring",
-        subtitle: "Beryl Family • Mercury Resonance",
-        img: "images/image_0.png",
-        category: "Ring",
-        maingem: "Natural Emerald (Emerald Cut)",
-        metal: "18K White Gold",
-        auth: "Janima QR Certified",
-        desc: "A stunning emerald cut natural emerald set within a brilliant diamond halo. The vivid green color fosters intellectual composure."
+      blue: {
+        title: "Blue Sapphire",
+        subtitle: "Corundum Variety • Saturn Alignment",
+        img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃",
+        trace: "Iron (Fe²⁺) + Titanium (Ti⁴⁺)",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "Coloration arises from charge transfer between iron and titanium. Highly valued in Vedic gemology."
       },
-      ruby_ring: {
-        title: "Vivid Ruby Ring",
+      ruby: {
+        title: "Pigeon Blood Ruby",
         subtitle: "Corundum Variety • Sun Vitality",
-        img: "images/image_1.png",
-        category: "Ring",
-        maingem: "Natural Ruby (Oval Cut)",
-        metal: "18K Yellow/White Gold",
-        auth: "Janima QR Certified",
-        desc: "A powerful pigeon blood red ruby accented by elegant side baguettes. Revered as the king of gemstones for vitality."
+        img: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃:Cr³⁺",
+        trace: "Chromium (Cr³⁺)",
+        crystal: "Hexagonal Prismatic",
+        hardness: "9.0 Mohs Scale",
+        desc: "Chromium replacing aluminum creates vivid red fluorescence. Revered as the king of gemstones."
       },
-      pink_sapphire: {
-        title: "Pink Sapphire Ring",
+      padparadscha: {
+        title: "Padparadscha Sapphire",
+        subtitle: "Rare Corundum • Pink-Orange Lotus",
+        img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃ (Cr³⁺ + Fe³⁺)",
+        trace: "Balanced Chromium & Ferric Iron",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "An exceptionally rare mixture of delicate lotus pink and sunset orange tones, iconic to Sri Lanka."
+      },
+      teal: {
+        title: "Teal Sapphire",
+        subtitle: "Bi-Color Corundum • Ocean Spectrum",
+        img: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃ (Fe / Ti Rich)",
+        trace: "High Iron & Titanium Concentration",
+        crystal: "Trigonal Habit",
+        hardness: "9.0 Mohs Scale",
+        desc: "Exhibits naturally blended deep forest green and ocean blue hues formed by localized iron concentration shifts."
+      },
+      white: {
+        title: "White Sapphire",
+        subtitle: "Pure Uncolored Corundum • Venus",
+        img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃ (Pure)",
+        trace: "Impurity Free",
+        crystal: "Trigonal Bipyramidal",
+        hardness: "9.0 Mohs Scale",
+        desc: "Pure aluminum oxide crystal without chromophore impurities. Natural alternative to diamond."
+      },
+      pink: {
+        title: "Pink Sapphire",
         subtitle: "Corundum Variety • Heart Energy",
-        img: "images/image_2.png",
-        category: "Ring",
-        maingem: "Natural Pink Sapphire (Emerald Cut)",
-        metal: "14K Rose Gold",
-        auth: "Janima QR Certified",
-        desc: "A radiant emerald-cut pink sapphire set in romantic rose gold with a pave diamond band. Celebrated for emotional balance."
+        img: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃:Cr³⁺",
+        trace: "Low Level Chromium",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "Subtle chromium concentrations yield radiant magenta and bubblegum pink tones."
       },
-      diamond_pendant: {
-        title: "Diamond Halo Pendant",
-        subtitle: "Pure Carbon • Venus Harmony",
-        img: "images/image_3.png",
-        category: "Pendant (Loose on Chain)",
-        maingem: "Natural Diamond (Round Brilliant)",
-        metal: "White Gold Setting",
-        auth: "Janima QR Certified",
-        desc: "A classic round brilliant natural diamond surrounded by a sparkling halo. Represents pure light and Venusian harmony."
+      yellow: {
+        title: "Yellow Sapphire",
+        subtitle: "Corundum Variety • Jupiter Abundance",
+        img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃:Fe³⁺",
+        trace: "Ferric Iron Color Centers",
+        crystal: "Trigonal / Hexagonal",
+        hardness: "9.0 Mohs Scale",
+        desc: "Known as Pushparaga in Sri Lanka. Associated with wisdom and financial expansion."
       },
-      blue_earrings: {
-        title: "Teardrop Blue Gem Earrings",
-        subtitle: "Ocean Spectrum • Clarity of Mind",
-        img: "images/image_4.png",
-        category: "Earrings (Drop)",
-        maingem: "Blue Topaz or Sapphire (Teardrop Cut)",
-        metal: "White Gold/Silver Setting",
-        auth: "Janima QR Certified",
-        desc: "Elegant teardrop drop earrings with deep blue gems and diamond accents, set against a green leaf motif. Fosters serenity."
+      star: {
+        title: "6-Ray Star Sapphire",
+        subtitle: "Asterism Phenomenon • Planetary Shield",
+        img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃ + TiO₂ Inclusions",
+        trace: "Oriented Rutile Needles (Silk)",
+        crystal: "Hexagonal Cabochon",
+        hardness: "9.0 Mohs Scale",
+        desc: "Contains microscopic rutile inclusions that reflect a floating six-rayed star across the surface."
       },
-      gold_necklaces: {
-        title: "Layered Gold Necklaces",
-        subtitle: "Multi-Pendant Set • Style & Energy",
-        img: "images/image_5.png",
-        category: "Necklace (Layered Set)",
-        maingem: "Teal Gem & Pave Pendants",
-        metal: "Yellow Gold Chains",
-        auth: "Janima QR Certified",
-        desc: "A stylish set of layered gold chains featuring a geometric teal gem pendant and a diamond pave crescent moon pendant."
+      green: {
+        title: "Green Sapphire",
+        subtitle: "Corundum Variety • Mercury Focus",
+        img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃:Fe²⁺:Fe³⁺",
+        trace: "Mixed Valence Iron Ions",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "Ranging from mint to deep olive green. Fosters intellectual composure."
       },
-      morganite_ring: {
-        title: "Peach Morganite Ring",
-        subtitle: "Beryl Family • Divine Love",
-        img: "images/image_6.png",
-        category: "Ring",
-        maingem: "Natural Morganite (Oval Cut)",
-        metal: "14K Rose Gold Infinity Band",
-        auth: "Janima QR Certified",
-        desc: "A delicate oval peach-pink morganite set in an intricate infinity-loop diamond pave band. associated with divine love."
+      catseye: {
+        title: "Chrysoberyl Cat's Eye",
+        subtitle: "Chatoyant Phenomenon • Ketu Shielding",
+        img: "https://images.unsplash.com/photo-1611591475165-f481c7f465c4?q=80&w=600&auto=format&fit=crop",
+        formula: "BeAl₂O₄",
+        trace: "Micro-Tube Cavities",
+        crystal: "Orthorhombic System",
+        hardness: "8.5 Mohs Scale",
+        desc: "Displays a sharp central line of light across its surface. Protects against negative planetary influences."
       },
-      citrine_ring: {
-        title: "Citrine Cockatil Ring",
-        subtitle: "Quartz Variety • Abundance & Joy",
-        img: "images/image_7.png",
-        category: "Ring (Cocktail)",
-        maingem: "Natural Citrine (Emerald Cut)",
-        metal: "White Gold Setting",
-        auth: "Janima QR Certified",
-        desc: "A massive, high-clarity emerald cut citrine with incredible fire. known to promote financial expansion and joy."
+      alexandrite: {
+        title: "Chrysoberyl Alexandrite",
+        subtitle: "Phenomenal Stone • Color Change",
+        img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
+        formula: "BeAl₂O₄:Cr³⁺",
+        trace: "Chromium Color Change Centers",
+        crystal: "Orthorhombic",
+        hardness: "8.5 Mohs Scale",
+        desc: "Shifts from green in daylight to red under incandescent light. Ultra-rare collector gem."
       },
-      alexandrite_ring: {
-        title: "Alexandrite Halo Ring",
-        subtitle: "Chrysoberyl Phenomena • Luck & Magic",
-        img: "images/image_8.png",
-        category: "Ring",
-        maingem: "Natural Alexandrite (Oval Cut)",
-        metal: "18K Yellow Gold",
-        auth: "Janima QR Certified",
-        desc: "A rare oval natural alexandrite within a vintage gold halo setting. shifts from green in daylight to red under warm light."
+      redspinel: {
+        title: "Flame Red Spinel",
+        subtitle: "Spinel Group • Natural Unheated",
+        img: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop",
+        formula: "MgAl₂O₄:Cr³⁺",
+        trace: "Chromium Trace",
+        crystal: "Cubic / Octahedral",
+        hardness: "8.0 Mohs Scale",
+        desc: "Historically mistaken for rubies in crown jewels. Requires no heat treatment."
       },
-      // Keep existing placeholder definitions for logic consistency but update modal data
-      blue_loose: { title: "Loose Blue Sapphires", subtitle: "Corundum Variety • Saturn Alignment", img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Blue Sapphire", metal: "N/A", auth: "Certified", desc: "A collection of certified loose blue sapphires suitable for custom jewelry." },
-      padparadscha: { title: "Padparadscha Sapphire", subtitle: "Rare Corundum • Lotus", img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop", category: "Loose Gem", maingem: "Padparadscha", metal: "N/A", auth: "Certified", desc: "Rare Sri Lankan pink-orange sapphire." },
-      teal: { title: "Teal Sapphires", subtitle: "Ocean Spectrum • Unheated", img: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Teal Sapphire", metal: "N/A", auth: "Certified", desc: "Unheated blue-green sapphires." },
-      white: { title: "White Sapphires", subtitle: "Corundum Variety • Pure Venus", img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "White Sapphire", metal: "N/A", auth: "Certified", desc: "Pure color centers, diamond substitute." },
-      yellow_loose: { title: "Loose Yellow Sapphires", subtitle: "Corundum Variety • Jupiter Abundance", img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Yellow Sapphire", metal: "N/A", auth: "Certified", desc: "Natural pushparaga for custom setting." },
-      redspinel: { title: "Loose Red Spinel", subtitle: "Spinel Group • Natural Unheated", img: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Red Spinel", metal: "N/A", auth: "Certified", desc: "Historically important red gem." },
-      purple: { title: "Purple Sapphires", subtitle: "Corundum • Royal Violet", img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Purple Sapphire", metal: "N/A", auth: "Certified", desc: "Rare mixed valence color centers." },
-      tsavorite: { title: "Tsavorite Garnet", subtitle: "Chrome Green • No Heat", img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Tsavorite", metal: "N/A", auth: "Certified", desc: "High fire alternative to emerald." },
-      aquamarine: { title: "Loose Aquamarine", subtitle: "Beryl Family • Ocean Beryl", img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Aquamarine", metal: "N/A", auth: "Certified", desc: "Natural sea-blue tones." },
-      catseye: { title: "Cat's Eye Chrysoberyl", subtitle: "Chatoyant • Ketu Protection", img: "https://images.unsplash.com/photo-1611591475165-f481c7f465c4?q=80&w=600&auto=format&fit=crop", category: "Loose Gem", maingem: "Cat's Eye", metal: "N/A", auth: "Certified", desc: "Neutralizes negative planetary transits." },
-      hessonite: { title: "Hessonite Garnet", subtitle: "Gomedha • Rahu Resonance", img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop", category: "Loose Gems", maingem: "Hessonite", metal: "N/A", auth: "Certified", desc: "Honey colored 'smoke' inclusions." }
+      cobalt: {
+        title: "Cobalt Blue Spinel",
+        subtitle: "Spinel Group • Electric Cobalt Blue",
+        img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop",
+        formula: "MgAl₂O₄:Co²⁺",
+        trace: "Cobalt Trace",
+        crystal: "Cubic System",
+        hardness: "8.0 Mohs Scale",
+        desc: "Colored by trace cobalt that imparts an electric neon blue sheen."
+      },
+      emerald: {
+        title: "Natural Emerald",
+        subtitle: "Beryl Family • Mercury Resonance",
+        img: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=600&auto=format&fit=crop",
+        formula: "Be₃Al₂(SiO₃)₆:Cr/V",
+        trace: "Chromium & Vanadium",
+        crystal: "Hexagonal Prism",
+        hardness: "7.5 - 8.0 Mohs Scale",
+        desc: "The quintessential green gemstone. Known for natural interior inclusions."
+      },
+      purple: {
+        title: "Purple Sapphire",
+        subtitle: "Corundum Variety • Royal Violet",
+        img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃ (Fe, Ti, Cr)",
+        trace: "Vanadium & Chromium Blend",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "Combines the calming properties of blue sapphire with the fiery passion of ruby."
+      },
+      orange: {
+        title: "Orange Sapphire",
+        subtitle: "Corundum Variety • Sunset Orange",
+        img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
+        formula: "Al₂O₃:Fe³⁺, Cr³⁺",
+        trace: "Ferric Iron & Chromium",
+        crystal: "Trigonal System",
+        hardness: "9.0 Mohs Scale",
+        desc: "A bold, energetic gemstone representing creative expression and warmth."
+      },
+      hessonite: {
+        title: "Hessonite Garnet",
+        subtitle: "Grossular Garnet • Rahu Alignment",
+        img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop",
+        formula: "Ca₃Al₂(SiO₄)₃",
+        trace: "Manganese & Iron",
+        crystal: "Dodecahedral Cubic",
+        hardness: "7.25 Mohs Scale",
+        desc: "Known as Gomedha. Exhibits a characteristic interior swirl effect."
+      },
+      tsavorite: {
+        title: "Tsavorite Garnet",
+        subtitle: "Grossular Variety • Chrome Green",
+        img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+        formula: "Ca₃Al₂(SiO₄)₃:V³⁺/Cr³⁺",
+        trace: "Vanadium & Chromium",
+        crystal: "Cubic System",
+        hardness: "7.5 Mohs Scale",
+        desc: "Possesses a higher refractive index than emerald, offering stunning brilliance."
+      },
+      aquamarine: {
+        title: "Natural Aquamarine",
+        subtitle: "Beryl Family • Ocean Tranquility",
+        img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop",
+        formula: "Be₃Al₂Si₆O₁₈:Fe²⁺",
+        trace: "Ferrous Iron",
+        crystal: "Hexagonal Prism",
+        hardness: "7.5 - 8.0 Mohs Scale",
+        desc: "Radiates serene sea-blue tones. Favored for emotional balance and clarity."
+      },
+      zircon: {
+        title: "Ceylon White Zircon",
+        subtitle: "Natural Nesosilicate • High Refraction",
+        img: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=600&auto=format&fit=crop",
+        formula: "ZrSiO₄",
+        trace: "Uranium/Thorium Trace",
+        crystal: "Tetragonal System",
+        hardness: "7.5 Mohs Scale",
+        desc: "Exhibits incredible double refraction and dispersion fire second only to diamond."
+      }
     };
 
     // Filter Logic
@@ -881,10 +1160,10 @@
       document.getElementById('modalTitle').innerText = data.title;
       document.getElementById('modalSub').innerText = data.subtitle;
       document.getElementById('modalImg').src = data.img;
-      document.getElementById('modalCategory').innerText = data.category;
-      document.getElementById('modalMainGem').innerText = data.maingem;
-      document.getElementById('modalMetal').innerText = data.metal;
-      document.getElementById('modalAuth').innerText = data.auth;
+      document.getElementById('modalFormula').innerText = data.formula;
+      document.getElementById('modalTrace').innerText = data.trace;
+      document.getElementById('modalCrystal').innerText = data.crystal;
+      document.getElementById('modalHardness').innerText = data.hardness;
       document.getElementById('modalDesc').innerText = data.desc;
 
       document.getElementById('gemModal').classList.add('active');
@@ -901,6 +1180,80 @@
       document.getElementById('gemModal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
+
+    // Admin Upload Modal Control
+    function openUploadModal() {
+      document.getElementById('uploadModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeUploadModal(event) {
+      if (event.target.id === 'uploadModal') {
+        closeUploadModalDirect();
+      }
+    }
+
+    function closeUploadModalDirect() {
+      document.getElementById('uploadModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Handle Direct Image File Uploading via FileReader
+    function handleImageUpload() {
+      const target = document.getElementById('uploadTarget').value;
+      const fileInput = document.getElementById('imageInput');
+
+      if (!fileInput.files || !fileInput.files[0]) {
+        alert("කරුණාකර Photo එකක් Select කරන්න!");
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        const base64Image = e.target.result;
+
+        if (target === 'top_banner') {
+          document.getElementById('topHeroBanner').src = base64Image;
+          localStorage.setItem('saved_top_banner', base64Image);
+        } else {
+          // Update Grid Image element
+          const targetImg = document.getElementById('img_' + target);
+          if (targetImg) {
+            targetImg.src = base64Image;
+          }
+          // Update Data Object
+          if (gemData[target]) {
+            gemData[target].img = base64Image;
+          }
+          // Save to LocalStorage
+          localStorage.setItem('saved_img_' + target, base64Image);
+        }
+
+        alert("Photo එක සාර්ථකව Upload වී Update විය!");
+        closeUploadModalDirect();
+      };
+
+      reader.readAsDataURL(file);
+    }
+
+    // Restore Saved Custom Uploaded Images on Page Load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedBanner = localStorage.getItem('saved_top_banner');
+      if (savedBanner) {
+        document.getElementById('topHeroBanner').src = savedBanner;
+      }
+
+      Object.keys(gemData).forEach(key => {
+        const savedImg = localStorage.getItem('saved_img_' + key);
+        if (savedImg) {
+          const imgElem = document.getElementById('img_' + key);
+          if (imgElem) imgElem.src = savedImg;
+          gemData[key].img = savedImg;
+        }
+      });
+    });
   </script>
 
 </body>
