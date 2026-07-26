@@ -70,7 +70,7 @@
       font-weight: 600;
     }
 
-    /* Hero Section */
+    /* Hero Section - Luxury Title Layout */
     .hero {
       text-align: center;
       padding: 50px 20px 30px 20px;
@@ -103,7 +103,7 @@
       font-weight: 300;
     }
 
-    /* Main Hero Photo */
+    /* Main Hero Gemstone Photo Card */
     .main-image-container {
       padding: 0 20px;
       margin-top: 25px;
@@ -176,8 +176,8 @@
       color: var(--muted-text);
     }
 
-    /* Collection Grid */
-    .collection-section {
+    /* Science & Philosophy Section */
+    .science-section {
       padding: 0 20px 60px 20px;
     }
 
@@ -200,96 +200,26 @@
       font-weight: 600;
     }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-
-    .grid-card {
-      background: var(--pure-white);
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    }
-
-    .grid-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .grid-content {
-      padding: 22px;
-    }
-
-    .grid-tag {
-      display: inline-block;
-      font-size: 10px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--primary-gold);
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .grid-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--dark-text);
-    }
-
-    .grid-desc {
-      font-size: 12.5px;
-      color: var(--muted-text);
-      line-height: 1.6;
-      border-top: 1px solid var(--border-color);
-      padding-top: 12px;
-    }
-
-    /* Neuro-Astrology Science Section */
-    .science-section {
-      padding: 0 20px 50px 20px;
-    }
-
     .science-card {
       background: var(--pure-white);
       border-radius: 20px;
       padding: 28px 22px;
       border: 1px solid var(--border-color);
       box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      margin-bottom: 30px;
     }
 
-    .science-title {
+    .science-card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
+      font-size: 20px;
       color: var(--dark-text);
-      margin-bottom: 6px;
-      text-align: center;
+      margin-bottom: 12px;
     }
 
-    .science-subtitle {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--primary-gold);
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 22px;
-    }
-
-    .science-text {
+    .science-card-desc {
       font-size: 13px;
       color: var(--muted-text);
       line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .science-text b {
-      color: var(--dark-text);
     }
 
     /* Contact Section */
@@ -406,18 +336,18 @@
     <p class="hero-desc">Discover precision-crafted Sri Lankan and global gemstones imbued with natural cosmic frequency alignment.</p>
   </header>
 
-  <!-- 2. Main Hero Gemstone Photo -->
+  <!-- 2. Main Hero Gemstone Photo Card -->
   <div class="main-image-container">
     <div class="main-image-card">
-      <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop" alt="Royal Blue Sapphire Ring">
+      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" alt="Natural Ceylon Sapphire Ring">
       <div class="image-overlay-text">
-        <div class="overlay-title">Royal Ceylon Blue Sapphire</div>
+        <div class="overlay-title">Royal Ceylon Sapphire</div>
         <div class="overlay-sub">100% Natural Metaphysical Grade Gemstone</div>
       </div>
     </div>
   </div>
 
-  <!-- 3. Quick Stats -->
+  <!-- 3. Quick Stats Section -->
   <section class="stats-section">
     <div class="stat-item">
       <div class="stat-number">100%</div>
@@ -433,89 +363,30 @@
     </div>
   </section>
 
-  <!-- 4. Corrected High Jewelry Collection Grid -->
-  <section class="collection-section">
-    <div class="section-header">
-      <div class="section-subtitle">Exquisite Fine Jewelry</div>
-      <h2 class="section-title">The Gemstone Spectrum</h2>
-    </div>
-
-    <div class="grid-container">
-      
-      <!-- 1. Blue Sapphire Ring -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop" alt="Blue Sapphire Ring">
-        <div class="grid-content">
-          <div class="grid-tag">Saturn (Shani) • Throat Chakra</div>
-          <div class="grid-title">Ceylon Blue Sapphire Ring</div>
-          <div class="grid-desc">Natural Blue Sapphire (Indranila). Calms hyperactive neural pathways and shields the sciatic nervous system against stress blockages.</div>
-        </div>
-      </div>
-
-      <!-- 2. Emerald Ring -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop" alt="Natural Emerald Ring">
-        <div class="grid-content">
-          <div class="grid-tag">Mercury (Budha) • Heart Chakra</div>
-          <div class="grid-title">Colombian Emerald Ring</div>
-          <div class="grid-desc">Vibrant Emerald (Pachchu). Stimulates sensory neurons, sharpens logical processing, speech articulation, and cognitive clarity.</div>
-        </div>
-      </div>
-
-      <!-- 3. Ruby Ring -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=1000&auto=format&fit=crop" alt="Natural Ruby Gemstone Ring">
-        <div class="grid-content">
-          <div class="grid-tag">Sun (Ravi) • Root & Solar Chakra</div>
-          <div class="grid-title">Pigeon Blood Ruby Ring</div>
-          <div class="grid-desc">Natural Ruby (Rathnakara/Padmaraga). Radiates solar energy, boosting cardiovascular neural impulses and core instinctual vitality.</div>
-        </div>
-      </div>
-
-      <!-- 4. Yellow Sapphire Ring -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop" alt="Yellow Sapphire Ring">
-        <div class="grid-content">
-          <div class="grid-tag">Jupiter (Guru) • Solar Plexus</div>
-          <div class="grid-title">Golden Yellow Sapphire Ring</div>
-          <div class="grid-desc">Natural Yellow Sapphire (Pushparaga). Enhances brain memory centers, synaptic plasticity, wisdom, and higher spiritual vibration.</div>
-        </div>
-      </div>
-
-      <!-- 5. Diamond / White Sapphire Ring -->
-      <div class="grid-card">
-        <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?q=80&w=1000&auto=format&fit=crop" alt="White Diamond / Sapphire Ring">
-        <div class="grid-content">
-          <div class="grid-tag">Venus (Shukra) • Crown Chakra</div>
-          <div class="grid-title">Diamond & White Sapphire Ring</div>
-          <div class="grid-desc">Pure Crystal / White Sapphire. Refines pineal gland secretions, elevating aesthetic creativity and nerve cellular harmony.</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 5. Neuro-Astrology Description Section -->
+  <!-- 4. Science & Cosmic Resonance Section -->
   <section class="science-section">
+    <div class="section-header">
+      <div class="section-subtitle">Scientific & Metaphysical Synergy</div>
+      <h2 class="section-title">Planets & The Human Nervous System</h2>
+    </div>
+
     <div class="science-card">
-      <div class="science-subtitle">Scientific & Cosmic Synergy</div>
-      <h2 class="science-title">Planets, Neurons & Cosmic Waves</h2>
-      
-      <div class="science-text">
-        <b>1. Planetary Electromagnetic Frequencies:</b> Celestial bodies emit distinct cosmic wave frequencies. In Vedic Astrology, each planet governs specific biological energy channels (Nadis) throughout the human body.
-      </div>
+      <div class="science-card-title">1. Planetary Electromagnetic Frequencies</div>
+      <div class="science-card-desc">Celestial bodies continuously emit subtle cosmic radiation and electromagnetic frequencies. In Vedic Astrology, each planet controls specific biological energy channels (Nadis).</div>
+    </div>
 
-      <div class="science-text">
-        <b>2. Neuronal Signal Modulation:</b> The human central nervous system contains billions of <b>Neurons</b> communicating via electrochemical impulses. Planetary energy shifts directly influence neurotransmitter release, emotional balance, and mental focus.
-      </div>
+    <div class="science-card">
+      <div class="science-card-title">2. Neuronal Signal Modulation</div>
+      <div class="science-card-desc">Our central nervous system contains billions of neurons that interact through delicate electrical impulses. Planetary alignments subtly affect neural synaptic responses, mental clarity, and emotional equilibrium.</div>
+    </div>
 
-      <div class="science-text">
-        <b>3. Natural Gemstone Prism Effect:</b> Natural mineral crystals act as optical and electromagnetic prisms. When worn in direct contact with skin, certified natural gemstones refine cosmic radiation, transmitting calibrated light energy directly through neural pathways.
-      </div>
+    <div class="science-card">
+      <div class="science-card-title">3. Natural Crystalline Prism Effect</div>
+      <div class="science-card-desc">Unheated natural gemstones (such as Corundum Blue Sapphire, Emerald, and Ruby) act as molecular light filters. When placed against human skin, they calibrate incoming environmental and cosmic light waves to harmonize neural pathways.</div>
     </div>
   </section>
 
-  <!-- 6. Direct Contact Section -->
+  <!-- 5. Direct Contact Section -->
   <section class="contact-section">
     <div class="contact-card">
       <div class="contact-title">Inquire & Verification</div>
@@ -528,7 +399,7 @@
     </div>
   </section>
 
-  <!-- 7. Footer Section -->
+  <!-- 6. Footer Section -->
   <footer class="footer">
     <div class="footer-brand">JANIMA</div>
     <div class="footer-sub">GEMS & JEWELS • KCA GROUP</div>
